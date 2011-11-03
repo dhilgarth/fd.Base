@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EE47BF52-F08E-4D90-A22A-78F538035E8D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>fd.Base.NHibernate</RootNamespace>
+    <AssemblyName>fd.Base.NHibernate</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\fd.Base.NHibernate.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FluentNHibernate">
+      <HintPath>..\Lib\Fluent NHibernate 1.2 with NHibernate 3.1\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\Lib\Fluent NHibernate 1.2 with NHibernate 3.1\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Extensions.cs" />
+    <Compile Include="EnumConvention.cs" />
+    <Compile Include="IPersistenceConfigurerProvider.cs" />
+    <Compile Include="IRawNHibernateConfigChanger.cs" />
+    <Compile Include="ISessionFactoryBuilder.cs" />
+    <Compile Include="MsSql2008PersistenceProvider.cs" />
+    <Compile Include="NoRawNHibernateConfigChanger.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository.cs" />
+    <Compile Include="SchemaDropper.cs" />
+    <Compile Include="SchemaRecreator.cs" />
+    <Compile Include="UnitOfWork.cs" />
+    <Compile Include="UnitOfWorkFactory.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\fd.Base.Common\fd.Base.Common.csproj">
+      <Project>{4831AD03-A71C-4A68-8AB8-B940241D76E0}</Project>
+      <Name>fd.Base.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy $(TargetPath) $(SolutionDir)..\..\bin\
+copy $(TargetDir)$(TargetName).pdb $(SolutionDir)..\..\bin\
+copy $(TargetDir)$(TargetName).xml $(SolutionDir)..\..\bin\</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
