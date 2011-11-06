@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fd.Base.Extensions", "fd.Base.Extensions\fd.Base.Extensions.csproj", "{9604C649-C2DA-4084-8A84-E0D010B6CF0A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fd.Base.Extensions.Simple", "fd.Base.Extensions\fd.Base.Extensions.Simple.csproj", "{9604C649-C2DA-4084-8A84-E0D010B6CF0A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fd.Base.Types", "fd.Base.Types\fd.Base.Types.csproj", "{D1B735AD-2104-44CC-A25D-960BDC705949}"
 EndProject
@@ -10,6 +10,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fd.Base.Common", "fd.Base.Common\fd.Base.Common.csproj", "{4831AD03-A71C-4A68-8AB8-B940241D76E0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fd.Base.NHibernate", "fd.Base.NHibernate\fd.Base.NHibernate.csproj", "{EE47BF52-F08E-4D90-A22A-78F538035E8D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fd.Base.Extensions.Advanced", "fd.Base.Extensions.Advanced\fd.Base.Extensions.Advanced.csproj", "{45CB56CA-3FE8-4B49-BD9B-150690207076}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fd.Base.AutoMapper", "fd.Base.AutoMapper\fd.Base.AutoMapper.csproj", "{5FD96352-199E-4347-B256-0BB26D42E948}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,6 +41,14 @@ Global
 		{EE47BF52-F08E-4D90-A22A-78F538035E8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE47BF52-F08E-4D90-A22A-78F538035E8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE47BF52-F08E-4D90-A22A-78F538035E8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45CB56CA-3FE8-4B49-BD9B-150690207076}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45CB56CA-3FE8-4B49-BD9B-150690207076}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45CB56CA-3FE8-4B49-BD9B-150690207076}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45CB56CA-3FE8-4B49-BD9B-150690207076}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FD96352-199E-4347-B256-0BB26D42E948}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FD96352-199E-4347-B256-0BB26D42E948}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FD96352-199E-4347-B256-0BB26D42E948}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FD96352-199E-4347-B256-0BB26D42E948}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

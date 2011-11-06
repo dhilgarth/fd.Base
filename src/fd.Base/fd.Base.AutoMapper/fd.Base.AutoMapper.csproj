@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{688CAF77-D5E1-406B-9AA0-D0AE4948004F}</ProjectGuid>
+    <ProjectGuid>{5FD96352-199E-4347-B256-0BB26D42E948}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>fd.Base.AutofacMvc</RootNamespace>
-    <AssemblyName>fd.Base.AutofacMvc</AssemblyName>
+    <RootNamespace>fd.Base.AutoMapper</RootNamespace>
+    <AssemblyName>fd.Base.AutoMapper</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -21,7 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Debug\fd.Base.AutofacMvc.XML</DocumentationFile>
+    <DocumentationFile>bin\Debug\fd.Base.AutoMapper.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -31,30 +31,15 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
-  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Autofac">
-      <HintPath>..\Lib\Autofac 2.5.2\Autofac.dll</HintPath>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Configuration" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Web" />
-    <Reference Include="System.Web.ApplicationServices" />
-    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="IAutoMapperSetup.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AutofacModelBinderProvider.cs" />
-    <Compile Include="CompositeModelFactory.cs" />
-    <Compile Include="AutofacMembershipProvider.cs" />
-    <Compile Include="Extensions.cs" />
-    <Compile Include="IContainerProvider.cs" />
-    <Compile Include="IModelFactory.cs" />
-    <Compile Include="ModelFactoryBase.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SingleModelFactoryBase.cs" />
+    <Reference Include="AutoMapper">
+      <HintPath>..\Lib\AutoMapper 2.0\AutoMapper.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

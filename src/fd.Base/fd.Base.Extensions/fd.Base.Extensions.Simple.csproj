@@ -8,8 +8,8 @@
     <ProjectGuid>{9604C649-C2DA-4084-8A84-E0D010B6CF0A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>fd.Base.Extensions</RootNamespace>
-    <AssemblyName>fd.Base.Extensions</AssemblyName>
+    <RootNamespace>fd.Base.Extensions.Simple</RootNamespace>
+    <AssemblyName>fd.Base.Extensions.Simple</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -21,7 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Debug\fd.Base.Extensions.XML</DocumentationFile>
+    <DocumentationFile>bin\Debug\fd.Base.Extensions.Simple.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -35,44 +35,16 @@
     <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Autofac">
-      <HintPath>..\Lib\Autofac 2.5.2\Autofac.dll</HintPath>
-    </Reference>
-    <Reference Include="AutoMapper, Version=2.0.0.232, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL" />
-    <Reference Include="NHibernate">
-      <HintPath>..\Lib\Fluent NHibernate 1.2 with NHibernate 3.1\NHibernate.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AutofacExtensions.cs" />
-    <Compile Include="AutoMapperExtensions.cs" />
+    <Compile Include="EnumerableExtensions.cs" />
     <Compile Include="GeneralExtensions.cs" />
     <Compile Include="LiteralExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StringExtensions.cs" />
     <Compile Include="TypeExtensions.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\fd.Base.AutofacMvc\fd.Base.AutofacMvc.csproj">
-      <Project>{688CAF77-D5E1-406B-9AA0-D0AE4948004F}</Project>
-      <Name>fd.Base.AutofacMvc</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\fd.Base.Common\fd.Base.Common.csproj">
-      <Project>{4831AD03-A71C-4A68-8AB8-B940241D76E0}</Project>
-      <Name>fd.Base.Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\fd.Base.NHibernate\fd.Base.NHibernate.csproj">
-      <Project>{EE47BF52-F08E-4D90-A22A-78F538035E8D}</Project>
-      <Name>fd.Base.NHibernate</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
 
-namespace fd.Base.Extensions
+namespace fd.Base.Extensions.Simple
 {
     public static class TypeExtensions
     {

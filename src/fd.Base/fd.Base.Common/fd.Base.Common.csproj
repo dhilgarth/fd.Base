@@ -35,17 +35,8 @@
     <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AutoMapper">
-      <HintPath>..\Lib\AutoMapper 2.0\AutoMapper.dll</HintPath>
-    </Reference>
-    <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AbstractFactoryBase.cs" />
@@ -55,7 +46,6 @@
     <Compile Include="ILocalData.cs" />
     <Compile Include="ILocalDataFactory.cs" />
     <Compile Include="IRepository.cs" />
-    <Compile Include="IAutoMapperSetup.cs" />
     <Compile Include="IUnitOfWork.cs" />
     <Compile Include="IUnitOfWorkFactory.cs" />
     <Compile Include="LocalDataFactory.cs" />
