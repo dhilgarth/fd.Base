@@ -51,12 +51,12 @@
       <STICK_COMMENT>False</STICK_COMMENT>
       <WRAP_AFTER_DECLARATION_LPAR>True</WRAP_AFTER_DECLARATION_LPAR>
       <WRAP_AFTER_INVOCATION_LPAR>True</WRAP_AFTER_INVOCATION_LPAR>
-      <WRAP_ARGUMENTS_STYLE>CHOP_IF_LONG</WRAP_ARGUMENTS_STYLE>
       <WRAP_BEFORE_BINARY_OPSIGN>True</WRAP_BEFORE_BINARY_OPSIGN>
+      <WRAP_BEFORE_EXTENDS_COLON>True</WRAP_BEFORE_EXTENDS_COLON>
       <WRAP_BEFORE_FIRST_TYPE_PARAMETER_CONSTRAINT>True</WRAP_BEFORE_FIRST_TYPE_PARAMETER_CONSTRAINT>
-      <WRAP_EXTENDS_LIST_STYLE>CHOP_IF_LONG</WRAP_EXTENDS_LIST_STYLE>
+      <WRAP_FOR_STMT_HEADER_STYLE>WRAP_IF_LONG</WRAP_FOR_STMT_HEADER_STYLE>
       <WRAP_LIMIT>160</WRAP_LIMIT>
-      <WRAP_PARAMETERS_STYLE>CHOP_IF_LONG</WRAP_PARAMETERS_STYLE>
+      <WRAP_MULTIPLE_DECLARATION_STYLE>CHOP_ALWAYS</WRAP_MULTIPLE_DECLARATION_STYLE>
     </FormatSettings>
     <UsingsSettings>
       <QualifiedUsingAtNestedScope>True</QualifiedUsingAtNestedScope>
@@ -325,13 +325,16 @@
     <Entry>
       <Match>
         <And>
-          <Kind Is="method"/>
+          <Or>
+            <Kind Is="method"/>
+            <Kind Is="operator"/>
+          </Or>
           <Access Is="public"/>
         </And>
       </Match>
       <Sort>
-        <Access Order="public"/>
         <Static/>
+        <Access Order="public"/>
         <Name/>
       </Sort>
     </Entry>
@@ -365,11 +368,14 @@
     <!-- operators -->
     <Entry>
       <Match>
+<And>
         <Kind Is="operator"/>
+        <Not>
+        <Access Is="public"/> </Not></And>
       </Match>
       <Sort>
-        <Access Order="public internal protected-internal protected private" />
         <Static/>
+        <Access Order="internal protected-internal protected private" />
         <Name/>
       </Sort>
     </Entry>
