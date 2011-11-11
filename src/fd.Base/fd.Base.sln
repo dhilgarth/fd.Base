@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fd.Base.Extensions.Simple", "fd.Base.Extensions\fd.Base.Extensions.Simple.csproj", "{9604C649-C2DA-4084-8A84-E0D010B6CF0A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fd.Base.Extensions.Simple", "fd.Base.Extensions.Simple\fd.Base.Extensions.Simple.csproj", "{9604C649-C2DA-4084-8A84-E0D010B6CF0A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fd.Base.Types", "fd.Base.Types\fd.Base.Types.csproj", "{D1B735AD-2104-44CC-A25D-960BDC705949}"
 EndProject

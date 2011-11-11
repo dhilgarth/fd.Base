@@ -54,7 +54,7 @@
       <Project>{4831AD03-A71C-4A68-8AB8-B940241D76E0}</Project>
       <Name>fd.Base.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\fd.Base.Extensions\fd.Base.Extensions.Simple.csproj">
+    <ProjectReference Include="..\fd.Base.Extensions.Simple\fd.Base.Extensions.Simple.csproj">
       <Project>{9604C649-C2DA-4084-8A84-E0D010B6CF0A}</Project>
       <Name>fd.Base.Extensions.Simple</Name>
     </ProjectReference>
