@@ -1,1 +1,1511 @@
-<TemplatesExport family="Live Templates" />
+<TemplatesExport family="Live Templates">
+  <Template uid="cec89236-3ea9-4d0b-8215-6dc28a1d2d63" shortcut="&lt;asp:HyperLink" description="ASP.NET Hyperlink" text="&lt;asp:HyperLink runat=&quot;server&quot; NavigateUrl=&quot;$LINK$&quot; Text=&quot;$TEXT$&quot; /&gt;" reformat="False" shortenQualifiedReferences="False">
+    <Context>
+      <ASPContext type="TAG_EXPECTED" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="LINK" expression="" initialRange="0" />
+      <Variable name="TEXT" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="26e3cd6f-3971-455b-a772-81a67da2951d" shortcut="t" description="Create ASP.NET tag" text="&lt;$TAG$ $RUNATSERVER$&gt;$END$&lt;/$TAG$&gt;" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <ASPContext type="TAG_EXPECTED" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="TAG" expression="suggestTagName()" initialRange="0" />
+      <Variable name="RUNATSERVER" expression="runAtServer()" initialRange="-1" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="4b97098f-1786-49b3-a0d1-6439d41a922f" shortcut="tc" description="Create closed tag" text="&lt;$TAG$ $RUNATSERVER$$END$/&gt;" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <ASPContext type="TAG_EXPECTED" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="TAG" expression="suggestTagName()" initialRange="0" />
+      <Variable name="RUNATSERVER" expression="runAtServer()" initialRange="-1" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="f7390fb2-2822-4232-a1dc-c3a37fde093b" shortcut="#if" description="Code snippet for #if" text="#if $expression$&#xD;&#xA;     $END$ &#xD;&#xA;  #endif" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories>
+      <Category name="Imported Visual C# Snippets" />
+    </Categories>
+    <Variables>
+      <Variable name="expression" expression="constant(&quot;true&quot;)" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="40ae4c11-4733-4556-8df9-14559fa65bbf" shortcut="#region" description="Code snippet for #region" text="#region $name$&#xD;&#xA;     $END$&#xD;&#xA;  #endregion" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories>
+      <Category name="Imported Visual C# Snippets" />
+    </Categories>
+    <Variables>
+      <Variable name="name" expression="constant(&quot;MyRegion&quot;)" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="aa559f4b-8af6-48ad-871d-232092c882a9" shortcut="~" description="Code snippet for destructor" text="~$classname$()&#xD;&#xA;  {&#xD;&#xA;    $END$&#xD;&#xA;  }" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="TypeMember" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories>
+      <Category name="Imported Visual C# Snippets" />
+    </Categories>
+    <Variables>
+      <Variable name="classname" expression="typeName()" initialRange="-1" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="83e1350f-5676-4e4d-af74-c84462e8e019" shortcut="Attribute" description="Code snippet for attribute using recommended pattern" text="[System.AttributeUsage(System.AttributeTargets.$target$, Inherited = $inherited$, AllowMultiple = $allowmultiple$)]&#xD;&#xA;sealed class $name$Attribute : System.Attribute&#xD;&#xA;{&#xD;&#xA;    // See the attribute guidelines at &#xD;&#xA;    //  http://go.microsoft.com/fwlink/?LinkId=85236&#xD;&#xA;    readonly string positionalString;&#xD;&#xA;    &#xD;&#xA;   // This is a positional argument&#xD;&#xA;   public $name$Attribute (string positionalString) &#xD;&#xA;   { &#xD;&#xA;        this.positionalString = positionalString;&#xD;&#xA;        &#xD;&#xA;       // TODO: Implement code here&#xD;&#xA;       $SELSTART$throw new System.NotImplementedException();$SELEND$&#xD;&#xA;   }&#xD;&#xA;   &#xD;&#xA;   public string PositionalString { get; private set; }&#xD;&#xA;   &#xD;&#xA;   // This is a named argument&#xD;&#xA;   public int NamedInt { get; set; } &#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="TypeMember, TypeAndNamespace" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories>
+      <Category name="Imported Visual C# Snippets" />
+    </Categories>
+    <Variables>
+      <Variable name="name" expression="constant(&quot;My&quot;)" initialRange="0" />
+      <Variable name="target" expression="constant(&quot;All&quot;)" initialRange="0" />
+      <Variable name="inherited" expression="constant(&quot;false&quot;)" initialRange="0" />
+      <Variable name="allowmultiple" expression="constant(&quot;true&quot;)" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="0934e69b-9374-4f07-976c-af52b8358c0e" shortcut="checked" description="Code snippet for checked block" text="checked&#xD;&#xA;  {&#xD;&#xA;     $END$&#xD;&#xA;  }" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Statement" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories>
+      <Category name="Imported Visual C# Snippets" />
+    </Categories>
+    <Variables />
+    <CustomProperties />
+  </Template>
+  <Template uid="107aec79-c5f8-4a42-b1f6-20bff9d9a55f" shortcut="class" description="Code snippet for class" text="class $name$&#xD;&#xA;  {&#xD;&#xA;    $END$&#xD;&#xA;  }" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="TypeMember, TypeAndNamespace" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories>
+      <Category name="Imported Visual C# Snippets" />
+    </Categories>
+    <Variables>
+      <Variable name="name" expression="constant(&quot;MyClass&quot;)" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="52af1f0e-fa41-408a-aeb0-3ca2ae065648" shortcut="ctor" description="Code snippet for constructor" text="public $classname$ ()&#xD;&#xA;  {&#xD;&#xA;    $END$&#xD;&#xA;  }" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="TypeMember" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories>
+      <Category name="Imported Visual C# Snippets" />
+    </Categories>
+    <Variables>
+      <Variable name="classname" expression="typeName()" initialRange="-1" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="1891fd68-ebda-4aff-90c6-eed9337279c9" shortcut="cw" description="Code snippet for Console.WriteLine" text="System.Console.WriteLine($END$);" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Statement" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories>
+      <Category name="Imported Visual C# Snippets" />
+    </Categories>
+    <Variables />
+    <CustomProperties />
+  </Template>
+  <Template uid="06b3614f-e418-482d-9e7a-607f7a81459a" shortcut="do" description="Code snippet for do...while loop" text="do&#xD;&#xA;{&#xD;&#xA;  $END$&#xD;&#xA;} while ($expression$);" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Statement" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories>
+      <Category name="Imported Visual C# Snippets" />
+    </Categories>
+    <Variables>
+      <Variable name="expression" expression="variableOfType(&quot;System.Boolean&quot;)" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="0657fedf-c1c2-4fcc-a7de-44a8581809e9" shortcut="else" description="Code snippet for else statement" text="else&#xD;&#xA;{&#xD;&#xA;  $END$&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Statement" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories>
+      <Category name="Imported Visual C# Snippets" />
+    </Categories>
+    <Variables />
+    <CustomProperties />
+  </Template>
+  <Template uid="8cdf6458-94f3-461b-824b-a7075b496234" shortcut="enum" description="Code snippet for enum" text="enum $name$&#xD;&#xA;{&#xD;&#xA;  $END$&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="TypeMember, TypeAndNamespace" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories>
+      <Category name="Imported Visual C# Snippets" />
+    </Categories>
+    <Variables>
+      <Variable name="name" expression="constant(&quot;MyEnum&quot;)" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="df53c54e-efcd-46b4-927c-7bff54d00ecd" shortcut="equals" description="Code snippet for implementing Equals() according to guidelines" text="// override object.Equals&#xD;&#xA; public override bool Equals (object obj)&#xD;&#xA;{&#xD;&#xA;  //       &#xD;&#xA;  // See the full list of guidelines at&#xD;&#xA;  //   http://go.microsoft.com/fwlink/?LinkID=85237  &#xD;&#xA;  // and also the guidance for operator== at&#xD;&#xA;  //   http://go.microsoft.com/fwlink/?LinkId=85238&#xD;&#xA;  //&#xD;&#xA;&#xD;&#xA;  if (obj == null || GetType() != obj.GetType()) &#xD;&#xA;  {&#xD;&#xA;    return false;&#xD;&#xA;  }&#xD;&#xA;        &#xD;&#xA;  // TODO: write your implementation of Equals() here&#xD;&#xA;  throw new System.NotImplementedException();&#xD;&#xA;  return base.Equals (obj);$END$ &#xD;&#xA;}    &#xD;&#xA;    &#xD;&#xA;// override object.GetHashCode&#xD;&#xA;public override int GetHashCode()&#xD;&#xA;{&#xD;&#xA;  // TODO: write your implementation of GetHashCode() here&#xD;&#xA;  throw new System.NotImplementedException();&#xD;&#xA;  return base.GetHashCode();&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="TypeMember" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories>
+      <Category name="Imported Visual C# Snippets" />
+    </Categories>
+    <Variables />
+    <CustomProperties />
+  </Template>
+  <Template uid="013038b9-8eb5-437f-9954-4ec6c6d4d82f" shortcut="Exception" description="Code snippet for exception" text="[System.Serializable]&#xD;&#xA;public class $newException$Exception : System.Exception&#xD;&#xA;{&#xD;&#xA; //&#xD;&#xA; // For guidelines regarding the creation of new exception types, see&#xD;&#xA; //    http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpgenref/html/cpconerrorraisinghandlingguidelines.asp&#xD;&#xA; // and&#xD;&#xA; //    http://msdn.microsoft.com/library/default.asp?url=/library/en-us/dncscol/html/csharp07192001.asp&#xD;&#xA; //&#xD;&#xA;&#xD;&#xA;  public $newException$Exception() { }&#xD;&#xA;  public $newException$Exception( string message ) : base( message ) { }&#xD;&#xA;  public $newException$Exception( string message, System.Exception inner ) : base( message, inner ) { }&#xD;&#xA;  protected $newException$Exception( &#xD;&#xA;  System.Runtime.Serialization.SerializationInfo info, &#xD;&#xA;  System.Runtime.Serialization.StreamingContext context ) : base( info, context ) { }&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="TypeMember, TypeAndNamespace" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories>
+      <Category name="Imported Visual C# Snippets" />
+    </Categories>
+    <Variables>
+      <Variable name="newException" expression="constant(&quot;My&quot;)" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="d1d7fbd8-bb88-4ace-bb40-d540e00a273b" shortcut="forr" description="Code snippet for reverse 'for' loop" text="for (int $index$ = $max$ - 1; $index$ &gt;= 0 ; $index$--)&#xD;&#xA;      {&#xD;&#xA;       $END$&#xD;&#xA;      }" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Statement" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories>
+      <Category name="Imported Visual C# Snippets" />
+    </Categories>
+    <Variables>
+      <Variable name="index" expression="constant(&quot;i&quot;)" initialRange="0" />
+      <Variable name="max" expression="constant(&quot;length&quot;)" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="97720923-bb14-4eb0-b920-aa915e5d0401" shortcut="if" description="Code snippet for if statement" text="if ($expression$)&#xD;&#xA;{  &#xD;&#xA;  $END$&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Statement" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories>
+      <Category name="Imported Visual C# Snippets" />
+    </Categories>
+    <Variables>
+      <Variable name="expression" expression="variableOfType(&quot;System.Boolean&quot;)" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="cc277cda-f1e7-4c8f-b828-5120d4b30c1a" shortcut="indexer" description="Code snippet for indexer" text="$access$ $type$ this[$indextype$ index]&#xD;&#xA;{&#xD;&#xA;  get {$END$ /* return the specified index here */ }&#xD;&#xA;  set { /* set the specified index to value here */ }&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="TypeMember" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories>
+      <Category name="Imported Visual C# Snippets" />
+    </Categories>
+    <Variables>
+      <Variable name="access" expression="constant(&quot;public&quot;)" initialRange="0" />
+      <Variable name="type" expression="constant(&quot;object&quot;)" initialRange="0" />
+      <Variable name="indextype" expression="constant(&quot;int&quot;)" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="59b911f9-25b4-4997-ac98-4f9935fcd690" shortcut="interface" description="Code snippet for interface" text="interface I$name$&#xD;&#xA;{&#xD;&#xA;  $END$&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="TypeMember, TypeAndNamespace" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories>
+      <Category name="Imported Visual C# Snippets" />
+    </Categories>
+    <Variables>
+      <Variable name="name" expression="constant(&quot;Interface&quot;)" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="a3416015-fcc8-46fb-88fb-9a12a6b52f69" shortcut="invoke" description="Code snippet for safely invoking an event" text="$DelegateType$ temp = $event$;&#xD;&#xA;if (temp != null)&#xD;&#xA;{&#xD;&#xA;temp($END$);&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Statement" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories>
+      <Category name="Imported Visual C# Snippets" />
+    </Categories>
+    <Variables>
+      <Variable name="event" expression="constant(&quot;MyEvent&quot;)" initialRange="0" />
+      <Variable name="DelegateType" expression="constant(&quot;EventHandler&quot;)" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="56f8b4cb-dbba-4343-8e70-875916bd8696" shortcut="iterator" description="Code snippet for a simple iterator" text="public $SystemCollectionsGenericIEnumeratorG$&lt;$type$&gt; GetEnumerator()&#xD;&#xA;{&#xD;&#xA;    $SELSTART$throw new System.NotImplementedException();&#xD;&#xA;    yield return default($type$);&#xD;&#xA;    $SELEND$&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="TypeMember" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories>
+      <Category name="Imported Visual C# Snippets" />
+    </Categories>
+    <Variables>
+      <Variable name="type" expression="constant(&quot;ElementType&quot;)" initialRange="0" />
+      <Variable name="SystemCollectionsGenericIEnumeratorG" expression="constant(&quot;System.Collections.Generic.IEnumerator&quot;)" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="2de185a8-9018-4563-87c8-c3f4278bc7b3" shortcut="iterindex" description="Code snippet for 'named' iterator/indexer pair using a nested class" text="public $name$Iterator $name$&#xD;&#xA;{&#xD;&#xA;  get&#xD;&#xA;  {&#xD;&#xA;    return new $name$Iterator(this);&#xD;&#xA;  }&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;public class $name$Iterator&#xD;&#xA;{&#xD;&#xA;  readonly $outer$ outer;&#xD;&#xA;&#xD;&#xA;  internal $name$Iterator($outer$ outer)&#xD;&#xA;  {&#xD;&#xA;    this.outer = outer;&#xD;&#xA;  }&#xD;&#xA;&#xD;&#xA;            // TODO: provide an appropriate implementation here&#xD;&#xA;  public int Length { get { return 1; } }&#xD;&#xA;&#xD;&#xA;  public $type$ this[int index]&#xD;&#xA;  {&#xD;&#xA;    get&#xD;&#xA;    {&#xD;&#xA;      //&#xD;&#xA;      // TODO: implement indexer here&#xD;&#xA;      //&#xD;&#xA;      // you have full access to $outer$ privates&#xD;&#xA;      //&#xD;&#xA;      $END$throw new System.NotImplementedException();&#xD;&#xA;      return default($type$);&#xD;&#xA;    }&#xD;&#xA;  }&#xD;&#xA;&#xD;&#xA;  public $SystemCollectionsGenericIEnumeratorG$&lt;$type$&gt; GetEnumerator()&#xD;&#xA;  {&#xD;&#xA;    for (int i = 0; i &lt; this.Length; i++)&#xD;&#xA;    {         &#xD;&#xA;      yield return this[i];&#xD;&#xA;    }&#xD;&#xA;  }&#xD;&#xA;}        " reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="TypeMember, TypeAndNamespace" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories>
+      <Category name="Imported Visual C# Snippets" />
+    </Categories>
+    <Variables>
+      <Variable name="type" expression="constant(&quot;ElementType&quot;)" initialRange="0" />
+      <Variable name="name" expression="constant(&quot;MyView&quot;)" initialRange="0" />
+      <Variable name="outer" expression="typeName()" initialRange="0" />
+      <Variable name="SystemCollectionsGenericIEnumeratorG" expression="constant(&quot;System.Collections.Generic.IEnumerator&quot;)" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="ab3bb2eb-6693-44e4-ba51-50799d6bc766" shortcut="lock" description="Code snippet for lock statement" text="lock ($expression$)&#xD;&#xA;{&#xD;&#xA;   $END$&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Statement" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories>
+      <Category name="Imported Visual C# Snippets" />
+    </Categories>
+    <Variables>
+      <Variable name="expression" expression="variableOfType(&quot;System.Object&quot;)" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="867a0711-5864-4730-b96b-3e6daefc3728" shortcut="mbox" description="Code snippet for MessageBox.Show" text="System.Windows.Forms.MessageBox.Show(&quot;$string$&quot;);" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Statement" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories>
+      <Category name="Imported Visual C# Snippets" />
+    </Categories>
+    <Variables>
+      <Variable name="string" expression="constant(&quot;Test&quot;)" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="00eb4bd4-f855-4ec2-bbac-00647ead4244" shortcut="namespace" description="Code snippet for namespace" text="namespace $name$&#xD;&#xA;  {&#xD;&#xA;     $END$&#xD;&#xA;  }" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="TypeAndNamespace" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories>
+      <Category name="Imported Visual C# Snippets" />
+    </Categories>
+    <Variables>
+      <Variable name="name" expression="constant(&quot;MyNamespace&quot;)" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="248af993-c871-4be1-981b-66d087bf011a" shortcut="propg" description="Code snippet for an automatically implemented property with a 'get' accessor and a private 'set' accessor" text="private $type$ _$field$;&#xD;&#xA;public $type$ $property$ { get{ return _$field$; }}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="TypeMember" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories>
+      <Category name="Imported Visual C# Snippets" />
+    </Categories>
+    <Variables>
+      <Variable name="type" expression="suggestVariableType()" initialRange="1" />
+      <Variable name="property" expression="suggestVariableName()" initialRange="0" />
+      <Variable name="field" expression="decapitalize(property)" initialRange="-1" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="b560e8e8-7b85-4045-a15f-3f6359802842" shortcut="sim" description="Code snippet for int Main()" text="static int Main(string[] args)&#xD;&#xA;{&#xD;&#xA;  $END$&#xD;&#xA;  return 0;&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="TypeMember" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories>
+      <Category name="Imported Visual C# Snippets" />
+    </Categories>
+    <Variables />
+    <CustomProperties />
+  </Template>
+  <Template uid="68d60e52-3b62-4800-9410-3358e0628de4" shortcut="struct" description="Code snippet for struct" text="struct $name$&#xD;&#xA;{&#xD;&#xA;  $END$&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="TypeMember, TypeAndNamespace" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories>
+      <Category name="Imported Visual C# Snippets" />
+    </Categories>
+    <Variables>
+      <Variable name="name" expression="constant(&quot;MyStruct&quot;)" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="3daf9b7e-e47c-4051-a3fe-cbb7fe4e05fd" shortcut="svm" description="Code snippet for 'void Main' method" text="static void Main(string[] args)&#xD;&#xA;{&#xD;&#xA;  $END$&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="TypeMember" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories>
+      <Category name="Imported Visual C# Snippets" />
+    </Categories>
+    <Variables />
+    <CustomProperties />
+  </Template>
+  <Template uid="b1bfe555-adc5-4d35-b43d-bbaca2b1914e" shortcut="switch" description="Code snippet for switch statement" text="switch ($expression$)&#xD;&#xA;{&#xD;&#xA;  $END$&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Statement" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories>
+      <Category name="Imported Visual C# Snippets" />
+    </Categories>
+    <Variables>
+      <Variable name="expression" expression="variableOfType(&quot;System.Enum&quot;)" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="8d79d7de-d082-4520-aba6-8fc339c76dfa" shortcut="try" description="Code snippet for try catch" text="try &#xD;&#xA;{          &#xD;&#xA;  &#xD;&#xA;}&#xD;&#xA;catch (System.Exception)&#xD;&#xA;{&#xD;&#xA;  $END$&#xD;&#xA;  throw;&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Statement" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories>
+      <Category name="Imported Visual C# Snippets" />
+    </Categories>
+    <Variables />
+    <CustomProperties />
+  </Template>
+  <Template uid="1a8062fa-ace9-40a3-89e6-e38b1f425b1c" shortcut="tryf" description="Code snippet for try finally" text="try &#xD;&#xA;{          &#xD;&#xA;      &#xD;&#xA;}&#xD;&#xA;finally&#xD;&#xA;{&#xD;&#xA;  $END$&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Statement" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories>
+      <Category name="Imported Visual C# Snippets" />
+    </Categories>
+    <Variables />
+    <CustomProperties />
+  </Template>
+  <Template uid="e8a712c9-15a8-4c55-972c-e14283aabcaf" shortcut="unchecked" description="Code snippet for unchecked block" text="unchecked&#xD;&#xA;{&#xD;&#xA;  $END$&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Statement" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories>
+      <Category name="Imported Visual C# Snippets" />
+    </Categories>
+    <Variables />
+    <CustomProperties />
+  </Template>
+  <Template uid="a6b1dd92-21c1-4741-a64b-168c8ec58b8b" shortcut="unsafe" description="Code snippet for unsafe statement" text="unsafe&#xD;&#xA;{&#xD;&#xA;  $END$&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Statement" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories>
+      <Category name="Imported Visual C# Snippets" />
+    </Categories>
+    <Variables />
+    <CustomProperties />
+  </Template>
+  <Template uid="a0eb2930-3151-40a1-933d-5ebba69ed48c" shortcut="using" description="Code snippet for using statement" text="using($resource$)&#xD;&#xA;{&#xD;&#xA;  $END$&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Statement" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories>
+      <Category name="Imported Visual C# Snippets" />
+    </Categories>
+    <Variables>
+      <Variable name="resource" expression="variableOfType(&quot;System.IDisposable&quot;)" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="b50faa69-d53e-46f2-b1f1-d65db6a708b8" shortcut="while" description="Code snippet for while loop" text="while ($expression$)&#xD;&#xA;{&#xD;&#xA;  $END$&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Statement" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories>
+      <Category name="Imported Visual C# Snippets" />
+    </Categories>
+    <Variables>
+      <Variable name="expression" expression="constant(&quot;true&quot;)" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="f874fa68-33d4-420a-befb-3e08129f1f35" shortcut="for" description="Simple &quot;for&quot; loop" text="for (int $INDEX$ = 0; $INDEX$ &lt; $UPPER$; $INDEX$++)&#xA;{&#xA;  $END$&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Statement" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories>
+      <Category name="Iteration" />
+    </Categories>
+    <Variables>
+      <Variable name="INDEX" expression="suggestIndexVariable()" initialRange="0" />
+      <Variable name="UPPER" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="bb710e6d-f559-445a-9a6e-127810a8802e" shortcut="foreach" description="foreach block" text="foreach ($TYPE$ $VARIABLE$ in $COLLECTION$)&#xA;{&#xA;  $END$&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Statement" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories>
+      <Category name="Iteration" />
+    </Categories>
+    <Variables>
+      <Variable name="COLLECTION" expression="enumerableVariable()" initialRange="0" />
+      <Variable name="TYPE" expression="suggestVariableType()" initialRange="0" />
+      <Variable name="VARIABLE" expression="suggestVariableName()" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="d8372a82-a9a2-45f6-883c-da53d523346d" shortcut="ital" description="Iterate an ArrayList" text="for (int $INDEX$ = 0; $INDEX$ &lt; $ARRAY$.Count; $INDEX$++)&#xA;{&#xA;  $TYPE$ $VAR$ = ($TYPE$)$ARRAY$[$INDEX$];&#xA;  $END$&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Statement" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories>
+      <Category name="Iteration" />
+    </Categories>
+    <Variables>
+      <Variable name="INDEX" expression="suggestIndexVariable()" initialRange="0" />
+      <Variable name="ARRAY" expression="variableOfType(&quot;System.Collections.ArrayList&quot;)" initialRange="0" />
+      <Variable name="TYPE" expression="guessElementType(ARRAY)" initialRange="0" />
+      <Variable name="VAR" expression="suggestVariableName()" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="cfbffc81-877d-4b4c-91cf-a2c35b1c6fed" shortcut="itar" description="Iterate an array" text="for (int $INDEX$ = 0; $INDEX$ &lt; $ARRAY$.Length; $INDEX$++)&#xA;{&#xA;  $TYPE$ $VAR$ = $ARRAY$[$INDEX$];&#xA;  $END$&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Statement" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories>
+      <Category name="Iteration" />
+    </Categories>
+    <Variables>
+      <Variable name="INDEX" expression="suggestIndexVariable()" initialRange="0" />
+      <Variable name="ARRAY" expression="arrayVariable()" initialRange="0" />
+      <Variable name="TYPE" expression="suggestVariableType()" initialRange="0" />
+      <Variable name="VAR" expression="suggestVariableName()" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="67d89d03-8b82-49ba-b7dc-a88e0bf900bb" shortcut="itdg" description="Iterate a Dictionary&lt;K, V&gt;" text="foreach ($DETYPE$ $ENTRY$ in $DICT$)&#xA;{&#xA;  $KEYTYPE$ $KEY$ = $ENTRY$.Key;&#xA;  $VALTYPE$ $VAL$ = $ENTRY$.Value;&#xA;  $END$&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Statement" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories>
+      <Category name="Iteration" />
+    </Categories>
+    <Variables>
+      <Variable name="DICT" expression="variableOfType(&quot;System.Collections.Generic.IDictionary`2&quot;)" initialRange="0" />
+      <Variable name="ENTRY" expression="suggestVariableName()" initialRange="0" />
+      <Variable name="DETYPE" expression="suggestVariableType()" initialRange="-1" />
+      <Variable name="KEYTYPE" expression="suggestVariableType()" initialRange="0" />
+      <Variable name="KEY" expression="suggestVariableName()" initialRange="0" />
+      <Variable name="VALTYPE" expression="suggestVariableType()" initialRange="0" />
+      <Variable name="VAL" expression="suggestVariableName()" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="a245039e-1864-4dc9-91dc-06a8b03237de" shortcut="itdic" description="Iterate a Dictionary" text="foreach (System.Collections.DictionaryEntry $ENTRY$ in $DICT$)&#xA;{&#xA;  $KEYTYPE$ $KEY$ = $CASTKEY$$ENTRY$.Key;&#xA;  $VALTYPE$ $VAL$ = $CASTVALUE$$ENTRY$.Value;&#xA;  $END$&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Statement" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories>
+      <Category name="Iteration" />
+    </Categories>
+    <Variables>
+      <Variable name="DICT" expression="variableOfType(&quot;System.Collections.IDictionary&quot;)" initialRange="0" />
+      <Variable name="ENTRY" expression="suggestVariableName()" initialRange="0" />
+      <Variable name="KEYTYPE" expression="guessKeyType(DICT)" initialRange="0" />
+      <Variable name="KEY" expression="suggestVariableName()" initialRange="0" />
+      <Variable name="CASTKEY" expression="castToLeftSideType()" initialRange="-1" />
+      <Variable name="VALTYPE" expression="guessValueType(DICT)" initialRange="0" />
+      <Variable name="VAL" expression="suggestVariableName()" initialRange="0" />
+      <Variable name="CASTVALUE" expression="castToLeftSideType()" initialRange="-1" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="79540e8f-0a3f-4d31-8075-bc893388fa05" shortcut="itli" description="Iterate a IList&lt;T&gt;" text="for (int $INDEX$ = 0; $INDEX$ &lt; $LIST$.Count; $INDEX$++)&#xD;&#xA;{&#xD;&#xA;  $TYPE$ $ITEM$ = $LIST$[$INDEX$];&#xD;&#xA;  $END$&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Statement" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories>
+      <Category name="Iteration" />
+    </Categories>
+    <Variables>
+      <Variable name="INDEX" expression="suggestIndexVariable()" initialRange="0" />
+      <Variable name="LIST" expression="variableOfType(&quot;System.Collections.Generic.IList`1&quot;)" initialRange="0" />
+      <Variable name="TYPE" expression="suggestVariableType()" initialRange="0" />
+      <Variable name="ITEM" expression="suggestVariableName()" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="79f15e81-2a19-4607-820f-3c7ddb8e7bed" shortcut="ritar" description="Iterate an array in inverse order" text="for (int $INDEX$ = $ARRAY$.Length - 1; $INDEX$ &gt;= 0; $INDEX$--)&#xA;{&#xA;  $TYPE$ $VAR$ = $ARRAY$[$INDEX$];&#xA;  $END$&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Statement" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories>
+      <Category name="Iteration" />
+    </Categories>
+    <Variables>
+      <Variable name="INDEX" expression="suggestIndexVariable()" initialRange="0" />
+      <Variable name="ARRAY" expression="arrayVariable()" initialRange="0" />
+      <Variable name="TYPE" expression="suggestVariableType()" initialRange="0" />
+      <Variable name="VAR" expression="suggestVariableName()" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="4ae64a35-d027-465a-83ce-963435035574" shortcut="asrt" description="Make an assertion" text="System.Diagnostics.Debug.Assert($END$);" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Statement" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables />
+    <CustomProperties />
+  </Template>
+  <Template uid="c719f005-d582-4787-a1d3-bf462546f906" shortcut="asrtn" description="Assert expression not null" text="System.Diagnostics.Debug.Assert($EXPR$ != null, &quot;$MESSAGE$&quot;);" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Statement" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="EXPR" expression="" initialRange="-1" />
+      <Variable name="MESSAGE" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="8a367719-ffce-4eae-9dcb-17d517539a3b" shortcut="attachedProperty" description="Attached property" text="public static readonly DependencyProperty $propertyName$Property = &#xD;&#xA;  DependencyProperty.RegisterAttached(&quot;$propertyName$&quot;, typeof ($propertyType$), typeof ($containingType$), new PropertyMetadata(default($propertyType$)));&#xD;&#xA;&#xD;&#xA;public static void Set$propertyName$($UIElement$ $element$, $propertyType$ value)&#xD;&#xA;{&#xD;&#xA;  $element$.SetValue($propertyName$Property, value);&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;public static $propertyType$ Get$propertyName$($UIElement$ $element$)&#xD;&#xA;{&#xD;&#xA;  return ($propertyType$) $element$.GetValue($propertyName$Property);&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="TypeMember" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="propertyName" expression="" initialRange="0" />
+      <Variable name="propertyType" expression="complete()" initialRange="0" />
+      <Variable name="containingType" expression="typeName()" initialRange="0" />
+      <Variable name="UIElement" expression="" initialRange="0" />
+      <Variable name="element" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="322ae561-00a8-4907-a65d-71522f7675b8" shortcut="dependencyProperty" description="Dependency property" text="public static readonly System.Windows.DependencyProperty $propertyName$Property =&#xD;&#xA;  System.Windows.DependencyProperty.Register(&quot;$propertyName$&quot;, typeof ($propertyType$), typeof ($containingType$), new PropertyMetadata(default($propertyType$)));&#xD;&#xA;&#xD;&#xA;public $propertyType$ $propertyName$&#xD;&#xA;{&#xD;&#xA;  get { return ($propertyType$) GetValue($propertyName$Property); }&#xD;&#xA;  set { SetValue($propertyName$Property, value); }&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="TypeMember" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="propertyName" expression="" initialRange="0" />
+      <Variable name="propertyType" expression="" initialRange="0" />
+      <Variable name="containingType" expression="typeName()" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="35611e8c-c788-4620-9eb8-78d54125c9f2" shortcut="ear" description="Create an empty array" text="$TYPE$[] $NAME$ = new $TYPE$[] {};" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Statement" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="TYPE" expression="" initialRange="0" />
+      <Variable name="NAME" expression="suggestVariableName()" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="06e4bbff-7e87-40d5-aa54-bdeec062c26b" shortcut="from" description="Language-Integrated Query" text="from $VAR$ in $COLLECTION$ $END$" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Expression, QueryClause" minimumLanguageVersion="3.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="COLLECTION" expression="variableOfType(&quot;System.Collections.IEnumerable&quot;)" initialRange="0" />
+      <Variable name="VAR" expression="suggestVariableName()" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="a3eaef77-d075-435c-8e4f-aa109d414f0a" shortcut="hal" description="ASP.NET MVC Html.ActionLink" text="Html.ActionLink(&quot;$TEXT$&quot;, &quot;$ACTION$&quot;, &quot;$CONTROLLER$&quot;)" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Expression" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="CONTROLLER" expression="AspMvcController()" initialRange="0" />
+      <Variable name="ACTION" expression="AspMvcAction()" initialRange="0" />
+      <Variable name="TEXT" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="f3167cfc-9e1f-4fe8-904d-0a3402f0ae64" shortcut="join" description="Join clause in language integrated query" text="join $NAME$ in $COL$ on $EXPR1$ equals $EXPR2$ $END$" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="QueryClause" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="COL" expression="variableOfType(&quot;System.Collections.IEnumerable&quot;)" initialRange="0" />
+      <Variable name="NAME" expression="suggestVariableName()" initialRange="0" />
+      <Variable name="EXPR1" expression="" initialRange="0" />
+      <Variable name="EXPR2" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="f07282fb-52e1-403d-a10c-8f64d194ad27" shortcut="out" description="Print a string" text="System.Console.Out.WriteLine(&quot;$END$&quot;);" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Statement" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables />
+    <CustomProperties />
+  </Template>
+  <Template uid="6b6a0feb-a1a9-43c0-b6b7-ee5650b0b5af" shortcut="outv" description="Print value of a variable" text="System.Console.Out.WriteLine(&quot;$EXPR$ = {0}&quot;, $EXPR$);" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Statement" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="EXPR" expression="variableOfType(&quot;&quot;)" initialRange="1" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="2f3b154e-f54f-4e7a-879b-aa0ad7590820" shortcut="pci" description="public const int" text="public const int " reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="TypeMember" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables />
+    <CustomProperties />
+  </Template>
+  <Template uid="b6a7c34a-006c-4986-b9cb-f5c3048dde4d" shortcut="pcs" description="public const string" text="public const string " reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="TypeMember" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables />
+    <CustomProperties />
+  </Template>
+  <Template uid="a7b3c150-4837-4aec-9e8a-9c79858fccf4" shortcut="prop" description="Property" text="private $type$ _$fieldName$;&#xD;&#xA;public $type$ $name$ { get{return _$fieldName$;} set{_$fieldName$ = value;} }" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="TypeMember" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="type" expression="" initialRange="1" />
+      <Variable name="fieldName" expression="decapitalize(NAME)" initialRange="-1" />
+      <Variable name="name" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="5718138a-84a9-4400-859c-2cf990d19ac5" shortcut="psr" description="public static readonly" text="public static readonly " reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="TypeMember" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables />
+    <CustomProperties />
+  </Template>
+  <Template uid="0ec13af4-8860-42d8-b807-7ad12a18e35c" shortcut="psvm" description="The &quot;Main&quot; method declaration" text="public static void Main( string[] args )&#xA;{&#xA;  $END$&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="TypeMember" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables />
+    <CustomProperties />
+  </Template>
+  <Template uid="aba42a67-6648-4a0d-9f2e-c36fb4ce8c3b" shortcut="rta" description="ASP.NET Controller RedirectToAction" text="RedirectToAction(&quot;$ACTION$&quot;, &quot;$CONTROLLER$&quot;)" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Expression" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="CONTROLLER" expression="AspMvcController()" initialRange="0" />
+      <Variable name="ACTION" expression="AspMvcAction()" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="052733ab-a59b-42fd-b453-685d835444a5" shortcut="sfc" description="Safely cast variable" text="$VARTYPE$ $VAR$ = $VAR1$ as $TYPE$;&#xA;&#xA;if ($VAR$ != null)&#xA;{&#xA;  $END$&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Statement" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="VAR1" expression="variableOfType(&quot;&quot;)" initialRange="0" />
+      <Variable name="TYPE" expression="" initialRange="0" />
+      <Variable name="VARTYPE" expression="suggestVariableType()" initialRange="-1" />
+      <Variable name="VAR" expression="suggestVariableName()" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="3b3c54f5-c98b-4320-8522-4eb47c2aae7e" shortcut="thr" description="throw new" text="throw new" reformat="False" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Statement" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables />
+    <CustomProperties />
+  </Template>
+  <Template uid="4b4ddddd-4ada-42fe-b0e7-150883fbdbc7" shortcut="toar" description="Convert an ArrayList to array" text="($TYPE$[])$ARRAYLIST$.ToArray(typeof($TYPE$))" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Expression" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="ARRAYLIST" expression="variableOfType(&quot;System.Collections.ArrayList&quot;)" initialRange="0" />
+      <Variable name="TYPE" expression="guessExpectedElementType()" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="fcbddfdc-9c41-40eb-9921-6c8d52df43d9" shortcut="ua" description="ASP.NET MVC Url.Action" text="Url.Action(&quot;$ACTION$&quot;, &quot;$CONTROLLER$&quot;)" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Expression" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="CONTROLLER" expression="AspMvcController()" initialRange="0" />
+      <Variable name="ACTION" expression="AspMvcAction()" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="98c834a3-c706-41ea-a984-2aea755a9db7" shortcut="ctx" description="Current file context" text="$CTX$" reformat="True" shortenQualifiedReferences="True">
+    <Scopes>
+      <Scope type="Everywhere" />
+    </Scopes>
+    <Categories />
+    <Variables>
+      <Variable name="CTX" expression="context()" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="bdb0422b-6c9b-4508-b914-ac7ef31ddce1" shortcut="nguid" description="Insert new GUID" text="$GUID$" reformat="False" shortenQualifiedReferences="False">
+    <Scopes>
+      <Scope type="Everywhere" />
+    </Scopes>
+    <Categories />
+    <Variables>
+      <Variable name="GUID" expression="guid()" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="8fa776ba-d4b5-4c6a-8769-fa6dd0ecc17f" shortcut="t" description="Create tag" text="&lt;$TAG$&gt;$END$&lt;/$TAG$&gt;" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <HTMLContext type="TAG_EXPECTED" sealed="True" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="TAG" expression="suggestTagName()" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="cc645d73-2fb4-4825-a5f9-93b5bff8c381" shortcut="tc" description="Create closed tag" text="&lt;$TAG$ $END$/&gt;" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <HTMLContext type="TAG_EXPECTED" sealed="True" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="TAG" expression="suggestTagName()" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="6d4e2714-f9c6-4cec-a1fe-988f5471206b" shortcut="&lt;a" description="HTML Hyperlink" text="&lt;a href=&quot;$LINK$&quot;&gt;$TEXT$&lt;/a&gt;" reformat="False" shortenQualifiedReferences="False">
+    <Scopes>
+      <Scope type="InHtmlLikeTag" />
+    </Scopes>
+    <Categories />
+    <Variables>
+      <Variable name="LINK" expression="" initialRange="0" />
+      <Variable name="TEXT" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="3ec2595c-f787-49eb-8172-67d871d6a8e5" shortcut="&lt;script" description="Create script tag" text="&lt;script type=&quot;$attributeValue$&quot;&gt;$END$&lt;/script&gt;" reformat="True" shortenQualifiedReferences="True">
+    <Scopes>
+      <Scope type="InHtmlLikeTag" />
+    </Scopes>
+    <Categories />
+    <Variables>
+      <Variable name="attributeValue" expression="suggestAttributeValue()" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="d5237ffa-8e02-42a8-a254-e9b21d415822" shortcut="a" description="Create tag attribute" text="$ATTR$=&quot;$END$&quot;" reformat="True" shortenQualifiedReferences="True">
+    <Scopes>
+      <Scope type="InHtmlLikeAttribute" />
+    </Scopes>
+    <Categories />
+    <Variables>
+      <Variable name="ATTR" expression="suggestAttributeNameByTag()" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="08a49bd0-3ae7-48ab-9570-4749f653c32f" shortcut="do" description="Code snippet for do...while loop" text="do {&#xA;  $END$&#xA;} while($COND$)" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <Javascript type="StatementExpected" />
+    </Context>
+    <Categories>
+      <Category name="Imported JScript Snippets" />
+    </Categories>
+    <Variables>
+      <Variable name="COND" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="adc6a196-6a53-46af-a545-515d1fda19bd" shortcut="dw" description="Code snippet for a writeln function call" text="document.writeln($END$);" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <Javascript type="StatementExpected" />
+    </Context>
+    <Categories>
+      <Category name="Imported JScript Snippets" />
+    </Categories>
+    <Variables />
+    <CustomProperties />
+  </Template>
+  <Template uid="fdc0ee34-b7d4-47f0-966d-a46dc03a0938" shortcut="else" description="Code snippet for an else statement" text="else {&#xA;  $END$&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <Javascript type="StatementExpected" />
+    </Context>
+    <Categories>
+      <Category name="Imported JScript Snippets" />
+    </Categories>
+    <Variables />
+    <CustomProperties />
+  </Template>
+  <Template uid="f63dbcc6-18b0-4194-a32d-e0adbce49462" shortcut="for" description="Code snippet for a for loop" text="for (var $VAR$ = 0; $VAR$ &lt; $LENGTH$; $VAR$++){&#xA;  $END$&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <Javascript type="StatementExpected" />
+    </Context>
+    <Categories>
+      <Category name="Imported JScript Snippets" />
+    </Categories>
+    <Variables>
+      <Variable name="VAR" expression="suggestIndexVariable()" initialRange="0" />
+      <Variable name="LENGTH" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="57ac5fae-ff78-42c2-9735-23f4d28ba216" shortcut="forin" description="Code snippet for a for...in loop" text="for (var $VAR$ in $ARRAY$){&#xA;  $END$&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <Javascript type="StatementExpected" />
+    </Context>
+    <Categories>
+      <Category name="Imported JScript Snippets" />
+    </Categories>
+    <Variables>
+      <Variable name="ARRAY" expression="" initialRange="0" />
+      <Variable name="VAR" expression="suggestVariableName()" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="1836c1c8-9d1d-4a09-b708-d644c83182fc" shortcut="forr" description="Code snippet for a reverse for loop" text="for (var $VAR$=$LENGTH$-1;$VAR$ &gt;=0; $VAR$--){&#xA;  $END$&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <Javascript type="StatementExpected" />
+    </Context>
+    <Categories>
+      <Category name="Imported JScript Snippets" />
+    </Categories>
+    <Variables>
+      <Variable name="VAR" expression="suggestIndexVariable()" initialRange="0" />
+      <Variable name="LENGTH" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="432b72df-fd9a-4cc0-9b8e-bb9b8f5adaeb" shortcut="function" description="Code snippet for a function" text="function $name$($parameters$){&#xA;  $END$&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <Javascript type="StatementExpected" />
+    </Context>
+    <Categories>
+      <Category name="Imported JScript Snippets" />
+    </Categories>
+    <Variables>
+      <Variable name="name" expression="" initialRange="0" />
+      <Variable name="parameters" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="2621890b-b646-4323-89c8-baf07a788e07" shortcut="if" description="Code snippet for an if statement" text="if ($COND$){&#xA;  $END$&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <Javascript type="StatementExpected" />
+    </Context>
+    <Categories>
+      <Category name="Imported JScript Snippets" />
+    </Categories>
+    <Variables>
+      <Variable name="COND" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="b9c6768f-ebcd-4042-90c9-c702180779aa" shortcut="switch" description="Code snippet for a switch statement" text="switch ($EXPR$){&#xA;case $CASE1$: &#xA;$END$&#xA;default:&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <Javascript type="StatementExpected" />
+    </Context>
+    <Categories>
+      <Category name="Imported JScript Snippets" />
+    </Categories>
+    <Variables>
+      <Variable name="EXPR" expression="" initialRange="0" />
+      <Variable name="CASE1" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="ca55c317-db6a-43b4-9eb1-b06957c01f6e" shortcut="try" description="Code snippet for a try catch statement" text="try {&#xA;  $END$&#xA;} catch (e) {&#xA; &#xA;} " reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <Javascript type="StatementExpected" />
+    </Context>
+    <Categories>
+      <Category name="Imported JScript Snippets" />
+    </Categories>
+    <Variables />
+    <CustomProperties />
+  </Template>
+  <Template uid="e59468e7-6584-410b-b852-c4a9939c174d" shortcut="while" description="Code snippet for a while loop" text="while ($COND$){&#xA;  $END$&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <Javascript type="StatementExpected" />
+    </Context>
+    <Categories>
+      <Category name="Imported JScript Snippets" />
+    </Categories>
+    <Variables>
+      <Variable name="COND" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="6eb3e311-2e68-4dbe-9e7e-3ae28dd31c27" shortcut="with" description="Code snippet for a with statement" text="with ($EXPR$){&#xA;  $END$&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <Javascript type="StatementExpected" />
+    </Context>
+    <Categories>
+      <Category name="Imported JScript Snippets" />
+    </Categories>
+    <Variables>
+      <Variable name="EXPR" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="da1dcc55-1cd0-41ca-9331-ef65eb32155d" shortcut="fun" description="" text="function($parameters$){&#xA;  $END$&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <Javascript type="ExpressionExpected" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="parameters" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="37d92cfc-158e-408a-82b8-cd225d7d7c22" shortcut="itar" description="" text="for (var $INDEX$=0;$INDEX$&lt;$ARRAY$.length;$INDEX$++){&#xA;var $VAR$ = $ARRAY$[$INDEX$];$END$&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <Javascript type="StatementExpected" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="ARRAY" expression="" initialRange="0" />
+      <Variable name="INDEX" expression="suggestIndexVariable()" initialRange="0" />
+      <Variable name="VAR" expression="suggestVariableName()" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="2355fc46-046a-4483-88c8-ea412d1c2806" shortcut="@inherits" description="Razor inherits directive" text="@inherits $TYPENAME$&#xD;&#xA;$END$" reformat="True" shortenQualifiedReferences="True">
+    <Scopes>
+      <Scope type="InRazorTag" language="Razor CSharp Mvc" />
+    </Scopes>
+    <Categories />
+    <Variables>
+      <Variable name="TYPENAME" expression="guessExpectedType()" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="a5932ed0-060d-4cd9-8dc0-4cc4fc6625db" shortcut="@model" description="Razor model directive" text="@model $TYPENAME$&#xD;&#xA;$END$" reformat="True" shortenQualifiedReferences="True">
+    <Scopes>
+      <Scope type="InRazorTag" language="Razor CSharp Mvc" />
+    </Scopes>
+    <Categories />
+    <Variables>
+      <Variable name="TYPENAME" expression="completeType()" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="ec38aa88-d1b3-4ffb-94cc-71251100a08f" shortcut="@section" description="Razor section" text="@section $section$&#xD;&#xA;{&#xD;&#xA;$END$&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Scopes>
+      <Scope type="InRazorTag" language="Razor CSharp Mvc" />
+    </Scopes>
+    <Categories />
+    <Variables>
+      <Variable name="section" expression="complete()" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="94bde4a6-18ed-4155-b70d-efa4082d8d09" shortcut="d" description="Create resource entry" text="&lt;data name=&quot;$name$&quot;&gt;&#xD;&#xA;    &lt;value&gt;$END$&lt;/value&gt;&#xD;&#xA;  &lt;/data&gt;" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <ResxContext type="ROOT_EXPECTED" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="name" expression="suggestTagName()" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="ce52eff1-dc9a-4e82-9fb9-4a52bece7900" shortcut="for" description="Simple &quot;For&quot; loop" text="For $VAR$ As Integer = 0 To $MAX$&#xD;&#xA;  $END$&#xD;&#xA;Next" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <VBContext context="Statement" />
+    </Context>
+    <Categories>
+      <Category name="Iteration" />
+    </Categories>
+    <Variables>
+      <Variable name="VAR" expression="suggestIndexVariable()" initialRange="0" />
+      <Variable name="MAX" expression="constant(&quot;100&quot;)" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="d255f825-afe7-4ef2-bef4-a03a9aa5d09c" shortcut="foreach" description="For Each block" text="For Each $VAR$ As $TYPE$ In $COL$ &#xD;&#xA;  $END$&#xD;&#xA;Next" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <VBContext context="Statement" />
+    </Context>
+    <Categories>
+      <Category name="Iteration" />
+    </Categories>
+    <Variables>
+      <Variable name="COL" expression="enumerableVariable()" initialRange="0" />
+      <Variable name="TYPE" expression="guessElementType(COL)" initialRange="0" />
+      <Variable name="VAR" expression="suggestVariableName()" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="1e2d60ee-6fb1-401b-af66-da22bbc0e49a" shortcut="itar" description="Iterate an array" text="For $VAR$ As Integer = 0 To $ARRAY$.Length - 1&#xD;&#xA;  Dim $ELEMENT$ As $TYPE$ = $ARRAY$($VAR$)&#xD;&#xA;  $END$&#xD;&#xA;Next" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <VBContext context="Statement" />
+    </Context>
+    <Categories>
+      <Category name="Iteration" />
+    </Categories>
+    <Variables>
+      <Variable name="ARRAY" expression="arrayVariable()" initialRange="0" />
+      <Variable name="VAR" expression="suggestIndexVariable()" initialRange="-1" />
+      <Variable name="TYPE" expression="guessElementType(ARRAY)" initialRange="0" />
+      <Variable name="ELEMENT" expression="suggestVariableName()" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="aa94910f-c44e-48aa-bdcc-600e1d510baa" shortcut="itdg" description="Iterate generic dictionary System.Collections.IDictionary(Of K, V)" text="For Each $ITER$ As $ITERTYPE$ In $DIC$&#xD;&#xA;  Dim $KEY$ As $KEYTYPE$ = $ITER$.Key&#xD;&#xA;  Dim $VALUE$ As $VALUETYPE$ = $ITER$.Value&#xD;&#xA;  $END$&#xD;&#xA;Next  &#xD;&#xA;  " reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <VBContext context="Statement" />
+    </Context>
+    <Categories>
+      <Category name="Iteration" />
+    </Categories>
+    <Variables>
+      <Variable name="DIC" expression="variableOfType(&quot;System.Collections.Generic.IDictionary`2&quot;)" initialRange="0" />
+      <Variable name="ITERTYPE" expression="guessElementType(DIC)" initialRange="-1" />
+      <Variable name="ITER" expression="suggestVariableName()" initialRange="0" />
+      <Variable name="KEYTYPE" expression="guessKeyType(DIC)" initialRange="0" />
+      <Variable name="KEY" expression="suggestVariableName()" initialRange="0" />
+      <Variable name="VALUETYPE" expression="guessValueType(DIC)" initialRange="0" />
+      <Variable name="VALUE" expression="suggestVariableName()" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="84f35072-97b1-4f62-9d80-cdbc8886906d" shortcut="itli" description="Iterate generic System.Collections.Generic.IList(Of T)" text="For $INDEX$ As Integer = 0 To $LIST$.Count - 1&#xD;&#xA;  Dim $ELEM$ As $TYPE$ = $LIST$($INDEX$)&#xD;&#xA;  $END$&#xD;&#xA;Next" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <VBContext context="Statement" />
+    </Context>
+    <Categories>
+      <Category name="Iteration" />
+    </Categories>
+    <Variables>
+      <Variable name="LIST" expression="variableOfType(&quot;System.Collections.Generic.IList`1&quot;)" initialRange="0" />
+      <Variable name="INDEX" expression="suggestIndexVariable()" initialRange="0" />
+      <Variable name="TYPE" expression="guessElementType(LIST)" initialRange="0" />
+      <Variable name="ELEM" expression="suggestVariableName()" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="db957065-1e26-48f4-9511-29e1a5ffcde3" shortcut="ritar" description="Iterate array in reverse order" text="For $VAR$ As Integer = $ARR$.Length - 1 To 0 Step -1&#xD;&#xA;  Dim $ELEM$ As $TYPE$ = $ARR$($VAR$)&#xD;&#xA;  $END$&#xD;&#xA;Next" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <VBContext context="Statement" />
+    </Context>
+    <Categories>
+      <Category name="Iteration" />
+    </Categories>
+    <Variables>
+      <Variable name="ARR" expression="arrayVariable()" initialRange="0" />
+      <Variable name="VAR" expression="suggestIndexVariable()" initialRange="0" />
+      <Variable name="TYPE" expression="guessElementType(ARR)" initialRange="0" />
+      <Variable name="ELEM" expression="suggestVariableName()" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="f6b15f62-e7af-4496-931c-5ba033f9afc8" shortcut="asrt" description="Make an assertion" text="System.Diagnostics.Debug.Assert($END$)" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <VBContext context="Statement" />
+    </Context>
+    <Categories />
+    <Variables />
+    <CustomProperties />
+  </Template>
+  <Template uid="2a056fab-e458-4ae5-b558-38dc2ecd6a57" shortcut="attachedProperty" description="Attached property" text="Public Shared ReadOnly $propertyName$Property As System.Windows.DependencyProperty = System.Windows.DependencyProperty.RegisterAttached(&quot;$propertyName$&quot;, GetType ($propertyType$), GetType ($containingType$), new System.Windows.PropertyMetadata(Nothing))&#xD;&#xA;&#xD;&#xA;Public Shared Function Get$propertyName$ (ByVal $element$ As $UIElement$) As $propertyType$&#xD;&#xA;  Return DirectCast ($element$.GetValue ($propertyName$Property), $propertyType$)&#xD;&#xA;End Function&#xD;&#xA;&#xD;&#xA;Public Shared Sub Set$propertyName$ (ByVal $element$ As $UIElement$, ByVal value As $propertyType$)&#xD;&#xA;  $element$.SetValue ($propertyName$Property, value)&#xD;&#xA;End Sub&#xD;&#xA;" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <VBContext context="TypeMember" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="propertyType" expression="complete()" initialRange="0" />
+      <Variable name="propertyName" expression="suggestVariableName()" initialRange="0" />
+      <Variable name="containingType" expression="typeName()" initialRange="0" />
+      <Variable name="UIElement" expression="complete()" initialRange="0" />
+      <Variable name="element" expression="suggestVariableName()" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="126373e2-5550-4cce-b6eb-5fb605b6fa11" shortcut="ByRef" description="ByRef parameter" text="ByRef $PARAM_NAME$ As $PARAM_TYPE$" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <VBContext context="MethodParameter" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="PARAM_TYPE" expression="" initialRange="0" />
+      <Variable name="PARAM_NAME" expression="suggestVariableName()" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="dbc60587-251a-49a2-9dc9-b4cbe2fe687a" shortcut="ByVal" description="ByVal parameter" text="ByVal $PARAM_NAME$ As $PARAM_TYPE$" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <VBContext context="MethodParameter" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="PARAM_TYPE" expression="" initialRange="0" />
+      <Variable name="PARAM_NAME" expression="suggestVariableName()" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="b94d46a1-81d5-4e30-a929-a98246653a3a" shortcut="ct" description="CType clause" text="CType($EXPR$, $TYPE$)" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <VBContext context="Expression" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="EXPR" expression="" initialRange="0" />
+      <Variable name="TYPE" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="f6ad72e3-215a-4ca4-bc49-d55b26aace82" shortcut="dc" description="DirectCast clause" text="DirectCast($EXPR$, $TYPE$)" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <VBContext context="Expression" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="EXPR" expression="" initialRange="0" />
+      <Variable name="TYPE" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="a9600e5e-f29c-4157-983f-44117942ce13" shortcut="dependencyProperty" description="Dependency property" text="Public Shared ReadOnly $propertyName$Property As System.Windows.DependencyProperty = System.Windows.DependencyProperty.Register(&quot;$propertyName$&quot;, GetType ($propertyType$), GetType ($containingType$), new System.Windows.PropertyMetadata(Nothing))&#xD;&#xA;&#xD;&#xA;Public Property $propertyName$ As $propertyType$&#xD;&#xA;  Get&#xD;&#xA;    Return DirectCast (GetValue($propertyName$Property), $propertyType$)&#xD;&#xA;  End Get&#xD;&#xA;  Set&#xD;&#xA;    SetValue($propertyName$Property, value)&#xD;&#xA;  End Set&#xD;&#xA;End Property" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <VBContext context="TypeMember" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="propertyType" expression="complete()" initialRange="0" />
+      <Variable name="propertyName" expression="suggestVariableName()" initialRange="0" />
+      <Variable name="containingType" expression="typeName()" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="8c625415-36b7-4201-8a87-dccfc481d186" shortcut="Dim" description="Declare a variable" text="Dim $VAR$ As $TYPE$" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <VBContext context="12" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="TYPE" expression="" initialRange="0" />
+      <Variable name="VAR" expression="suggestVariableName()" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="715b67f9-7a8b-4d34-94f3-b5bb26475d2d" shortcut="fun" description="Function declaration" text="Function $NAME$() As $TYPE$&#xD;&#xA;  $END$&#xD;&#xA;End Function" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <VBContext context="TypeMember" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="NAME" expression="" initialRange="0" />
+      <Variable name="TYPE" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="5dfc94ec-08f6-4aa7-a204-107c4792c86f" shortcut="out" description="Print a string" text="System.Console.WriteLine(&quot;$END$&quot;)" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <VBContext context="Statement" />
+    </Context>
+    <Categories />
+    <Variables />
+    <CustomProperties />
+  </Template>
+  <Template uid="54da8c3f-884a-4f51-859c-5e6cb8bce0eb" shortcut="outv" description="Print value of an expression" text="System.Console.WriteLine(&quot;$EXPR$ = {0}&quot;, $EXPR$)" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <VBContext context="Statement" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="EXPR" expression="variableOfType(&quot;System.Object&quot;)" initialRange="1" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="8961fdce-83fc-41c1-8485-c6c5c9eaf85c" shortcut="pssm" description="Public Shared Sub Main" text="Public Shared Sub Main&#xD;&#xA;  $END$&#xD;&#xA;End Sub" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <VBContext context="TypeMember" />
+    </Context>
+    <Categories />
+    <Variables />
+    <CustomProperties />
+  </Template>
+  <Template uid="b1ea46f9-689c-4efe-90cb-5c6855d12429" shortcut="sel" description="Select case statement" text="Select Case $expression$&#xD;&#xA;    $END$&#xD;&#xA;End Select" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <VBContext context="Statement" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="expression" expression="completeSmart()" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="ca295002-c96e-465a-96d2-c91a2b57b03d" shortcut="sfc" description="Safely cast a variable" text="Dim $VAR$ As $TYPE$ = TryCast($EXPR$, $TYPE$)&#xD;&#xA;&#xD;&#xA;If $VAR$ IsNot Nothing Then&#xD;&#xA;  $END$&#xD;&#xA;End If" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <VBContext context="Statement" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="EXPR" expression="variableOfType(&quot;System.Object&quot;)" initialRange="0" />
+      <Variable name="TYPE" expression="" initialRange="1" />
+      <Variable name="VAR" expression="suggestVariableName()" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="1803d1ec-792f-4c49-b0ea-870fea86a3cd" shortcut="sub" description="Subroutine declaration" text="Sub $NAME$()&#xD;&#xA;  $END$&#xD;&#xA;End Sub" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <VBContext context="TypeMember" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="NAME" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="cea95d2b-050f-4743-bcd0-8af4e72fce86" shortcut="tc" description="TryCast clause" text="TryCast($EXPR$, $TYPE$)" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <VBContext context="Expression" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="EXPR" expression="" initialRange="0" />
+      <Variable name="TYPE" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="7108624f-1300-48e1-a5c8-5e20bb4a21d9" shortcut="a" description="Create  tag attribute" text="$ATTR$=&quot;$END$&quot;" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <XMLContext type="ATTRIBUTE_EXPECTED" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="ATTR" expression="suggestXmlAttributeNameByTag()" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="386c3925-1979-496a-886a-92306b0bfd4f" shortcut="t" description="Create tag" text="&lt;$TAG$&gt;$END$&lt;/$TAG$&gt;" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <XMLContext type="TAG_EXPECTED" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="TAG" expression="suggestXmlTagName()" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="e2ed20a1-6d55-49cc-8f62-e5be7d7fc0ca" shortcut="tc" description="Create closed tag" text="&lt;$TAG$ $END$/&gt;" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <XMLContext type="TAG_EXPECTED" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="TAG" expression="suggestXmlTagName()" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="98787290-a0f2-46b6-a9bd-5425f2a8494a" shortcut="build" description="" text="Fixture.Build&lt;$type$&gt;()$END$.CreateAnonymous();" reformat="True" shortenQualifiedReferences="True">
+    <Scopes>
+      <Scope type="InCSharpExpression" minimumLanguageVersion="2.0" />
+    </Scopes>
+    <Categories>
+      <Category name="AutoFixture" />
+    </Categories>
+    <Variables>
+      <Variable name="type" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="670837ee-7672-4fd9-8b57-b62e9cbf8747" shortcut="ca" description="" text="Fixture.CreateAnonymous&lt;$type$&gt;();" reformat="True" shortenQualifiedReferences="True">
+    <Scopes>
+      <Scope type="InCSharpExpression" minimumLanguageVersion="2.0" />
+    </Scopes>
+    <Categories>
+      <Category name="AutoFixture" />
+    </Categories>
+    <Variables>
+      <Variable name="type" expression="completeSmart()" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="065f9df2-0736-461f-a45a-6086004fca50" shortcut="freeze" description="" text="Fixture.Freeze&lt;$type$&gt;();" reformat="True" shortenQualifiedReferences="True">
+    <Scopes>
+      <Scope type="InCSharpExpression" minimumLanguageVersion="2.0" />
+    </Scopes>
+    <Categories>
+      <Category name="AutoFixture" />
+    </Categories>
+    <Variables>
+      <Variable name="type" expression="completeSmart()" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="6529bc41-c90e-47eb-b09b-21bead23a256" shortcut="ncprop" description="" text="private $type$ _$fieldName$;&#xD;&#xA;&#xD;&#xA;public $type$ $name$&#xD;&#xA;{&#xD;&#xA;	get{return _$fieldName$;}&#xD;&#xA;	set&#xD;&#xA;	{&#xD;&#xA;		if(value == null)&#xD;&#xA;			throw new ArgumentNullException(&quot;value&quot;);&#xD;&#xA;		_$fieldName$ = value;&#xD;&#xA;	}&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Scopes>
+      <Scope type="InCSharpTypeMember" minimumLanguageVersion="2.0" />
+    </Scopes>
+    <Categories>
+      <Category name="General" />
+    </Categories>
+    <Variables>
+      <Variable name="type" expression="" initialRange="1" />
+      <Variable name="name" expression="suggestVariableName()" initialRange="0" />
+      <Variable name="fieldName" expression="decapitalize(name)" initialRange="-1" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="07f740b1-e799-41bb-b68a-ea5668b0ce5c" shortcut="ps" description="" text="protected static $type$ $name$;" reformat="True" shortenQualifiedReferences="True">
+    <Scopes>
+      <Scope type="InCSharpTypeMember" minimumLanguageVersion="2.0" />
+    </Scopes>
+    <Categories>
+      <Category name="General" />
+    </Categories>
+    <Variables>
+      <Variable name="type" expression="suggestVariableType()" initialRange="0" />
+      <Variable name="name" expression="suggestVariableName()" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="8a5be1eb-9c71-466c-9432-b605d932fb40" shortcut="l" description="Lambda expression" text="()=&gt;$END$;" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Expression" minimumLanguageVersion="3.0" />
+    </Context>
+    <Categories>
+      <Category name="Lambdas" />
+    </Categories>
+    <Variables />
+    <CustomProperties />
+  </Template>
+  <Template uid="a354a3aa-9e2a-4cf3-846c-4d111cf09aa5" shortcut="ll" description="Long lambda expression" text="()=&gt;{$END$};" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Expression" minimumLanguageVersion="3.0" />
+    </Context>
+    <Categories>
+      <Category name="Lambdas" />
+    </Categories>
+    <Variables />
+    <CustomProperties />
+  </Template>
+  <Template uid="2afe0e54-2936-43b8-9c3c-9a79c075a861" shortcut="bec" description="" text="Because of = () =&gt; { $END$ };" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="TypeMember" minimumLanguageVersion="3.0" />
+    </Context>
+    <Categories>
+      <Category name="MSpec" />
+    </Categories>
+    <Variables />
+    <CustomProperties />
+  </Template>
+  <Template uid="b83abb82-e750-42cf-8273-b7b38d46ccd9" shortcut="eit" description="" text="It should_$observation$;" reformat="True" shortenQualifiedReferences="True">
+    <Scopes>
+      <Scope type="InCSharpTypeMember" minimumLanguageVersion="2.0" />
+    </Scopes>
+    <Categories>
+      <Category name="MSpec" />
+    </Categories>
+    <Variables>
+      <Variable name="observation" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="214033bd-1df9-463c-86d4-80b8e2c63f64" shortcut="est" description="" text="Establish context = () =&gt; { $END$ };" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="TypeMember" minimumLanguageVersion="3.0" />
+    </Context>
+    <Categories>
+      <Category name="MSpec" />
+    </Categories>
+    <Variables />
+    <CustomProperties />
+  </Template>
+  <Template uid="f0a9f4e1-aebd-46df-856c-97dda258a0eb" shortcut="fail" description="" text="It should_fail =&#xD;&#xA;	() =&gt; Exception.ShouldNotBeNull();&#xD;&#xA;&#xD;&#xA;static Exception Exception;" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="TypeMember" minimumLanguageVersion="3.0" />
+    </Context>
+    <Categories>
+      <Category name="MSpec" />
+    </Categories>
+    <Variables />
+    <CustomProperties />
+  </Template>
+  <Template uid="d3047eca-e90c-4605-a1d4-0593aaed4cf2" shortcut="it" description="" text="It should_$observation$ = () =&gt; $END$;" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="TypeMember" minimumLanguageVersion="3.0" />
+    </Context>
+    <Categories>
+      <Category name="MSpec" />
+    </Categories>
+    <Variables>
+      <Variable name="observation" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="0dc3f61d-c450-4ec4-82ff-e04b1d538504" shortcut="setup" description="" text="using Machine.Specifications;&#xD;&#xA;using Ploeh.AutoFixture;&#xD;&#xA;using Ploeh.AutoFixture.AutoNSubstitute;&#xD;&#xA;&#xD;&#xA;// ReSharper disable InconsistentNaming&#xD;&#xA;// ReSharper disable UnusedMember.Local&#xD;&#xA;// ReSharper disable ReturnValueOfPureMethodIsNotUsed&#xD;&#xA;// ReSharper disable UnusedMember.Global&#xD;&#xA;// ReSharper disable CheckNamespace&#xD;&#xA;namespace $namespace$.$SutType$Spec&#xD;&#xA;{&#xD;&#xA;	public class with_initialized_mocks&#xD;&#xA;	{&#xD;&#xA;		protected static IFixture Fixture;&#xD;&#xA;&#xD;&#xA;		Establish context = () =&gt; &#xD;&#xA;		{&#xD;&#xA;			Fixture = new Fixture().Customize(new AutoNSubstituteCustomization());&#xD;&#xA;		};&#xD;&#xA;	}&#xD;&#xA;&#xD;&#xA;	public class with_uninitialized_SUT : with_initialized_mocks&#xD;&#xA;	{&#xD;&#xA;		protected static $SutType$ Sut;&#xD;&#xA;		protected static $SutType$ CreateSut() { return Fixture.CreateAnonymous&lt;$SutType$&gt;(); }&#xD;&#xA;	}&#xD;&#xA;&#xD;&#xA;	public class with_initialized_SUT : with_uninitialized_SUT&#xD;&#xA;	{&#xD;&#xA;		Establish context = () =&gt; &#xD;&#xA;		{&#xD;&#xA;			Sut = CreateSut();&#xD;&#xA;		};&#xD;&#xA;	}&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Scopes>
+      <Scope type="InCSharpTypeAndNamespace" minimumLanguageVersion="2.0" />
+    </Scopes>
+    <Categories>
+      <Category name="MSpec" />
+    </Categories>
+    <Variables>
+      <Variable name="SutType" expression="" initialRange="1" />
+      <Variable name="namespace" expression="fileDefaultNamespace()" initialRange="-1" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="44259940-6bfe-430f-ba8f-df44d695399f" shortcut="when" description="" text="[Machine.Specifications.Subject(typeof($Type$))]&#xD;&#xA;public class when_$Context$ : with_initialized_SUT&#xD;&#xA;{&#xD;&#xA;	Machine.Specifications.Establish context = () =&gt; {  };&#xD;&#xA;&#xD;&#xA;	Machine.Specifications.Because of = () =&gt; $END$ ;&#xD;&#xA;&#xD;&#xA;	Machine.Specifications.It should_$observation$;&#xD;&#xA;}&#xD;&#xA;" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="TypeAndNamespace" minimumLanguageVersion="3.0" />
+    </Context>
+    <Categories>
+      <Category name="MSpec" />
+    </Categories>
+    <Variables>
+      <Variable name="Type" expression="complete()" initialRange="0" />
+      <Variable name="Context" expression="" initialRange="0" />
+      <Variable name="observation" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="a17f1577-0784-4a51-9c88-ccec27e9e357" shortcut="nhprop" description="" text="private $type$ _$fieldName$;&#xD;&#xA;&#xD;&#xA;public virtual $type$ $propertyName$&#xD;&#xA;{&#xD;&#xA;	get { return _$fieldName$; }&#xD;&#xA;	set&#xD;&#xA;	{&#xD;&#xA;		if(value == null)&#xD;&#xA;			throw new ArgumentNullException(&quot;value&quot;);&#xD;&#xA;		_$fieldName$ = value;&#xD;&#xA;	}&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Scopes>
+      <Scope type="InCSharpFile" minimumLanguageVersion="2.0" />
+    </Scopes>
+    <Categories>
+      <Category name="NHibernate" />
+    </Categories>
+    <Variables>
+      <Variable name="type" expression="" initialRange="1" />
+      <Variable name="propertyName" expression="suggestVariableName()" initialRange="0" />
+      <Variable name="fieldName" expression="decapitalize(propertyName)" initialRange="-1" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+</TemplatesExport>
