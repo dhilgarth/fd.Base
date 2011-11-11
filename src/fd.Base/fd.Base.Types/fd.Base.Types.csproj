@@ -40,7 +40,9 @@
     <Compile Include="Month.cs" />
     <Compile Include="Percentage.cs" />
     <Compile Include="Constrained.cs" />
+    <Compile Include="PositivePercentage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnconstrainedPercentage.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
