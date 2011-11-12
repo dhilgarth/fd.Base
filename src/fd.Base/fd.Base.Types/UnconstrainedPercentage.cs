@@ -1,7 +1,7 @@
 namespace fd.Base.Types
 {
     /// <summary>
-    /// Represents a percentage value in the wider sense.
+    /// Represents a percentage value in the wider sense. 100% = 1.0.
     /// </summary>
     public class UnconstrainedPercentage : Constrained<double>
     {
@@ -46,7 +46,7 @@ namespace fd.Base.Types
         /// </returns>
         public override string ToString()
         {
-            return Value + "%";
+            return (Value * 100) + "%";
         }
     }
 }

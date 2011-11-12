@@ -1,9 +1,9 @@
 ﻿namespace fd.Base.Types
 {
     /// <summary>
-    /// Represents a percentage value in the narrow sense: 0% to 100%.
+    /// Represents a percentage value in the narrow sense: 0% (0.0) to 100% (1.0).
     /// </summary>
-    public class Percentage : Constrained<int>
+    public class Percentage : Constrained<double>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Percentage"/> class.
@@ -19,7 +19,7 @@
         /// <param name="value">
         /// The value.
         /// </param>
-        public Percentage(int value)
+        public Percentage(double value)
             : base(Constraint, value)
         {
         }
@@ -33,7 +33,7 @@
         /// <returns>
         /// The result of the conversion.
         /// </returns>
-        public static implicit operator Percentage(int value)
+        public static implicit operator Percentage(double value)
         {
             return new Percentage(value);
         }
@@ -46,7 +46,7 @@
         /// </returns>
         public override string ToString()
         {
-            return Value + "%";
+            return (Value * 100) + "%";
         }
 
         /// <summary>
@@ -58,9 +58,9 @@
         /// <returns>
         /// <c>true</c> if the value represents one such narrow percentage; otherwise, <c>false</c>.
         /// </returns>
-        private static bool Constraint(int v)
+        private static bool Constraint(double v)
         {
-            return v >= 0 && v <= 100;
+            return v >= 0 && v <= 1;
         }
     }
 }
