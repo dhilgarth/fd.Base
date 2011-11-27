@@ -37,6 +37,7 @@
   <ItemGroup>
     <Compile Include="DayOfMonth.cs" />
     <Compile Include="Digit.cs" />
+    <Compile Include="Extensions.cs" />
     <Compile Include="Month.cs" />
     <Compile Include="Percentage.cs" />
     <Compile Include="Constrained.cs" />
