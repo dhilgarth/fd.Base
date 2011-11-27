@@ -2,6 +2,9 @@
 
 namespace fd.Base.Extensions.Simple
 {
+    /// <summary>
+    /// Provides literal extension methods.
+    /// </summary>
     public static class LiteralExtensions
     {
         /// <summary>
