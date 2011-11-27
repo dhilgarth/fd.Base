@@ -23,6 +23,22 @@ namespace fd.Base.NHibernate
             return conventions.AddFromAssemblyOf<EnumConvention>();
         }
 
+        public static void KeyColumnFromReference<TChild>(
+            this OneToManyPart<TChild> collectionmap, ClassMap<TChild> map, Expression<Func<TChild, object>> referenceprop)
+        {
+            var propertyname = ExpressionsHelper.GetPropertyName(referenceprop);
+            var column = ((IMappingProvider)map).GetClassMapping().References.First(m => m.Name == propertyname).Columns.First().Name;
+
+            collectionmap.KeyColumn(column);
+        }
+
+        public static void KeyColumnFromReference<T, TChild>(this OneToManyPart<TChild> collectionmap, ClassMap<TChild> map)
+        {
+            var column = ((IMappingProvider)map).GetClassMapping().References.First(m => m.ContainingEntityType == typeof(TChild)).Columns.First().Name;
+
+            collectionmap.KeyColumn(column);
+        }
+
         /// <summary>
         /// Registers the default NHibernate types with this container builder.
         /// </summary>
