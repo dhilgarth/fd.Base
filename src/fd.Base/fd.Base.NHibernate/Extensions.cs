@@ -1,6 +1,12 @@
+using System;
+using System.Linq;
+using System.Linq.Expressions;
 using Autofac;
+using fd.Base.Common;
+using FluentNHibernate;
 using FluentNHibernate.Cfg;
 using FluentNHibernate.Conventions.Helpers;
+using FluentNHibernate.Mapping;
 
 namespace fd.Base.NHibernate
 {
@@ -12,9 +18,15 @@ namespace fd.Base.NHibernate
         /// <summary>
         /// Adds the default conventions.
         /// </summary>
-        /// <typeparam name="T">The return type.</typeparam>
-        /// <param name="conventions">The conventions finder to add the conventions to.</param>
-        /// <returns>Returns the result of the add operation.</returns>
+        /// <typeparam name="T">
+        /// The return type.
+        /// </typeparam>
+        /// <param name="conventions">
+        /// The conventions finder to add the conventions to.
+        /// </param>
+        /// <returns>
+        /// Returns the result of the add operation.
+        /// </returns>
         public static T AddDefault<T>(this SetupConventionFinder<T> conventions)
         {
             conventions.Add(
@@ -42,7 +54,9 @@ namespace fd.Base.NHibernate
         /// <summary>
         /// Registers the default NHibernate types with this container builder.
         /// </summary>
-        /// <param name="builder">The container builder to register the types in.</param>
+        /// <param name="builder">
+        /// The container builder to register the types in.
+        /// </param>
         public static void RegisterNHibernate(this ContainerBuilder builder)
         {
             builder.RegisterType<NoRawNHibernateConfigChanger>().AsImplementedInterfaces().SingleInstance();
