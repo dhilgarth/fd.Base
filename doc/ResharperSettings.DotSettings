@@ -1890,6 +1890,9 @@ static Exception Exception;</s:String>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=EE35C55EFCE2F940BF9687DAA2DB5803/Field/=namespace/Expression/@EntryValue">fileDefaultNamespace()</s:String>
 	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=EE35C55EFCE2F940BF9687DAA2DB5803/Field/=namespace/InitialRange/@EntryValue">-1</s:Int64>
 	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=EE35C55EFCE2F940BF9687DAA2DB5803/Field/=namespace/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=EE35C55EFCE2F940BF9687DAA2DB5803/Field/=persistenceProvider/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=EE35C55EFCE2F940BF9687DAA2DB5803/Field/=persistenceProvider/Expression/@EntryValue">completeSmart()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=EE35C55EFCE2F940BF9687DAA2DB5803/Field/=persistenceProvider/Order/@EntryValue">5</s:Int64>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=EE35C55EFCE2F940BF9687DAA2DB5803/Reformat/@EntryValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=EE35C55EFCE2F940BF9687DAA2DB5803/Scope/=E8F0594528C33E45BBFEC6CFE851095D/@KeyIndexDefined">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=EE35C55EFCE2F940BF9687DAA2DB5803/Scope/=E8F0594528C33E45BBFEC6CFE851095D/Type/@EntryValue">InCSharpProjectFile</s:String>
@@ -1924,7 +1927,8 @@ namespace $namespace$&#xD;
             builder.RegisterAssemblyTypesOf("$CommonNamespaceRoot$.*.exe").RegisterDefaultTypes();&#xD;
 &#xD;
             var connectionString = ConfigurationManager.ConnectionStrings["$connectionStringName$"].ConnectionString;&#xD;
-            builder.RegisterInstance(new MsSql2008PersistenceProvider(connectionString)).AsImplementedInterfaces();&#xD;
+			IPersistenceConfigurerProvider persistenceProvider = new $persistenceProvider$(connectionString)&#xD;
+            builder.RegisterInstance(persistenceProvider).AsImplementedInterfaces();&#xD;
 &#xD;
             var container = builder.Build();&#xD;
             return container;&#xD;
