@@ -101,7 +101,7 @@ namespace fd.Base.Extensions.Advanced
         /// </param>
         public static void RegisterDefaultTypes(this IRegistrationBuilder<object, ScanningActivatorData, DynamicRegistrationStyle> builder)
         {
-            builder.RegisterTypesEndingWith("Service", "Factory", "Provider", "Builder", "Setup", "Generator");
+            builder.RegisterTypesEndingWith("Service", "Factory", "Provider", "Builder", "Setup", "Generator", "Configuration");
         }
     }
 }
