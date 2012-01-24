@@ -47,6 +47,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DefaultAutoMappingConfiguration.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="EnumConvention.cs" />
     <Compile Include="IPersistenceConfigurerProvider.cs" />
@@ -58,6 +59,7 @@
     <Compile Include="Repository.cs" />
     <Compile Include="SchemaDropper.cs" />
     <Compile Include="SchemaRecreator.cs" />
+    <Compile Include="DefaultSessionFactoryBuilder.cs" />
     <Compile Include="UnitOfWork.cs" />
     <Compile Include="UnitOfWorkFactory.cs" />
   </ItemGroup>
@@ -65,6 +67,14 @@
     <ProjectReference Include="..\fd.Base.Common\fd.Base.Common.csproj">
       <Project>{4831AD03-A71C-4A68-8AB8-B940241D76E0}</Project>
       <Name>fd.Base.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\fd.Base.Extensions.Simple\fd.Base.Extensions.Simple.csproj">
+      <Project>{9604C649-C2DA-4084-8A84-E0D010B6CF0A}</Project>
+      <Name>fd.Base.Extensions.Simple</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\fd.Base.Types\fd.Base.Types.csproj">
+      <Project>{D1B735AD-2104-44CC-A25D-960BDC705949}</Project>
+      <Name>fd.Base.Types</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
