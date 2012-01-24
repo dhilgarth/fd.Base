@@ -48,7 +48,7 @@ namespace fd.Base.Types
             set
             {
                 if (!_constraint(value))
-                    throw new ArgumentException("The value doesn't match the constraints of this type.");
+                    throw new ArgumentException(string.Format("The value {0} doesn't match the constraints of this type.", value));
                 _value = value;
             }
         }
