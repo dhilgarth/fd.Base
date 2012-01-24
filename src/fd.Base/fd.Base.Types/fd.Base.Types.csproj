@@ -35,8 +35,10 @@
     <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="AbstractEntity.cs" />
     <Compile Include="DayOfMonth.cs" />
     <Compile Include="Digit.cs" />
+    <Compile Include="Entity.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="Month.cs" />
     <Compile Include="Percentage.cs" />
