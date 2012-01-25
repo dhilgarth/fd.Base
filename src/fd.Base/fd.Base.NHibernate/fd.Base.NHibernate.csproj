@@ -47,6 +47,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AllUpperCaseColumnNameConvention.cs" />
     <Compile Include="DefaultAutoMappingConfiguration.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="EnumConvention.cs" />
@@ -60,6 +61,7 @@
     <Compile Include="SchemaDropper.cs" />
     <Compile Include="SchemaRecreator.cs" />
     <Compile Include="DefaultSessionFactoryBuilder.cs" />
+    <Compile Include="AllUpperCaseTableNameConvention.cs" />
     <Compile Include="UnitOfWork.cs" />
     <Compile Include="UnitOfWorkFactory.cs" />
   </ItemGroup>

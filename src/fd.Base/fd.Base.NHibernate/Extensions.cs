@@ -26,8 +26,7 @@ namespace fd.Base.NHibernate
         /// <returns> Returns the result of the add operation. </returns>
         public static T AddDefault<T>(this SetupConventionFinder<T> conventions)
         {
-            conventions.Add(DefaultCascade.All());
-            return conventions.AddFromAssemblyOf<EnumConvention>();
+            return conventions.Add(DefaultCascade.All(), new EnumConvention(), new AllUpperCaseColumnNameConvention(), new AllUpperCaseTableNameConvention());
         }
 
         public static void KeyColumnFromReference<TChild>(
