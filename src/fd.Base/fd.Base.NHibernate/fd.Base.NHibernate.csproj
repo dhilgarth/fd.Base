@@ -55,6 +55,7 @@
     <Compile Include="IRawNHibernateConfigChanger.cs" />
     <Compile Include="ISessionFactoryBuilder.cs" />
     <Compile Include="MsSql2008PersistenceProvider.cs" />
+    <Compile Include="MySqlPersistenceProvider.cs" />
     <Compile Include="NoRawNHibernateConfigChanger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository.cs" />
