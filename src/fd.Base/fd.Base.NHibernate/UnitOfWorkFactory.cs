@@ -1,6 +1,6 @@
 using System;
-using NHibernate;
 using fd.Base.Common;
+using NHibernate;
 
 namespace fd.Base.NHibernate
 {
@@ -27,7 +27,11 @@ namespace fd.Base.NHibernate
             set { _localData[_currentUnitOfWorkKey] = value; }
         }
 
-        #region IUnitOfWorkFactory Members
+        public void DisposeUnitOfWork(IUnitOfWork unitOfWork)
+        {
+            unitOfWork.Dispose();
+            CurrentUnitOfWork = null;
+        }
 
         public IUnitOfWork Start()
         {
@@ -37,13 +41,5 @@ namespace fd.Base.NHibernate
             CurrentUnitOfWork = unitOfWork;
             return unitOfWork;
         }
-
-        public void DisposeUnitOfWork(IUnitOfWork unitOfWork)
-        {
-            unitOfWork.Dispose();
-            CurrentUnitOfWork = null;
-        }
-
-        #endregion
     }
 }

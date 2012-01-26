@@ -5,23 +5,17 @@ using FluentNHibernate.Conventions.Instances;
 
 namespace fd.Base.NHibernate
 {
-    /// <summary>
-    /// A convention that saves enums as ints instead of strings.
-    /// </summary>
+    /// <summary>A convention that saves <c>enum</c> s as <c>int</c> s instead of strings.</summary>
     public class EnumConvention : IUserTypeConvention
     {
-        /// <summary>
-        /// Accepts the specified criteria.
-        /// </summary>
+        /// <summary>Accepts the specified criteria.</summary>
         /// <param name="criteria">The criteria.</param>
         public void Accept(IAcceptanceCriteria<IPropertyInspector> criteria)
         {
             criteria.Expect(x => x.Property.PropertyType.IsEnum);
         }
 
-        /// <summary>
-        /// Applies the specified target.
-        /// </summary>
+        /// <summary>Applies the specified target.</summary>
         /// <param name="target">The target.</param>
         public void Apply(IPropertyInstance target)
         {

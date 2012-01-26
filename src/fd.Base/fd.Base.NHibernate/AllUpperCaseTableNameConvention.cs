@@ -4,9 +4,7 @@ using FluentNHibernate.Conventions.Instances;
 
 namespace fd.Base.NHibernate
 {
-    /// <summary>
-    ///   A convention that changes all table names to all upper case.
-    /// </summary>
+    /// <summary>A convention that changes all table names to all upper case.</summary>
     public class AllUpperCaseTableNameConvention : IClassConvention
     {
         public void Apply(IClassInstance instance)

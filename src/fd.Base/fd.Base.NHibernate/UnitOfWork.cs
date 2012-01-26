@@ -4,9 +4,7 @@ using NHibernate;
 
 namespace fd.Base.NHibernate
 {
-    /// <summary>
-    /// The unit of work.
-    /// </summary>
+    /// <summary>The unit of work.</summary>
     public class UnitOfWork : IUnitOfWork
     {
         private readonly IRepository _repository;
@@ -15,15 +13,9 @@ namespace fd.Base.NHibernate
         private readonly IUnitOfWorkFactory _unitOfWorkFactory;
         private bool _isDisposed;
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="UnitOfWork"/> class.
-        /// </summary>
-        /// <param name="unitOfWorkFactory">
-        /// The unit of work factory.
-        /// </param>
-        /// <param name="session">
-        /// The session.
-        /// </param>
+        /// <summary>Initializes a new instance of the <see cref="UnitOfWork" /> class.</summary>
+        /// <param name="unitOfWorkFactory">The unit of work factory.</param>
+        /// <param name="session">The session.</param>
         public UnitOfWork(IUnitOfWorkFactory unitOfWorkFactory, ISession session)
         {
             if (unitOfWorkFactory == null)
@@ -36,9 +28,7 @@ namespace fd.Base.NHibernate
             _transaction = session.BeginTransaction();
         }
 
-        /// <summary>
-        /// Gets the repository.
-        /// </summary>
+        /// <summary>Gets the repository.</summary>
         public IRepository Repository
         {
             get
@@ -48,18 +38,14 @@ namespace fd.Base.NHibernate
             }
         }
 
-        /// <summary>
-        /// Commits this instance.
-        /// </summary>
+        /// <summary>Commits this instance.</summary>
         public void Commit()
         {
             CheckNotDisposed();
             _transaction.Commit();
         }
 
-        /// <summary>
-        /// Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
-        /// </summary>
+        /// <summary>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</summary>
         public void Dispose()
         {
             if (_isDisposed)
@@ -74,18 +60,14 @@ namespace fd.Base.NHibernate
             _unitOfWorkFactory.DisposeUnitOfWork(this);
         }
 
-        /// <summary>
-        /// Rolls back this instance.
-        /// </summary>
+        /// <summary>Rolls back this instance.</summary>
         public void Rollback()
         {
             CheckNotDisposed();
             _transaction.Rollback();
         }
 
-        /// <summary>
-        /// Checks that this instance is not disposed.
-        /// </summary>
+        /// <summary>Checks that this instance is not disposed.</summary>
         private void CheckNotDisposed()
         {
             if (_isDisposed)

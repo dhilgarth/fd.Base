@@ -66,64 +66,9 @@ namespace fd.Base.AutofacMvc
             get { return _realProvider.RequiresUniqueEmail; }
         }
 
-        public T GetRealProvider<T>() where T : MembershipProvider
+        public override bool ChangePassword(string username, string oldPassword, string newPassword)
         {
-            return (T) _realProvider;
-        }
-
-        public IComponentContext GetContainer()
-        {
-            var context = GetHttpContext();
-            var provider = context.ApplicationInstance as IContainerProvider;
-            if (provider == null)
-                throw new Exception("The global HttpApplication instance needs to implement " + typeof (IContainerProvider).FullName);
-            return provider.Get();
-        }
-
-        private static HttpContext GetHttpContext()
-        {
-            var context = HttpContext.Current;
-            if (context == null)
-                throw new InvalidOperationException("No HttpContext");
-            return context;
-        }
-
-        public override void Initialize(string name, NameValueCollection config)
-        {
-            base.Initialize(name, config);
-            var realProviderTypeName = config["realProviderType"];
-            if (string.IsNullOrWhiteSpace(realProviderTypeName))
-                throw new Exception("Please configure the providerId from the membership provider " + name);
-            Type realProviderType = null;
-            foreach (var assembly in AppDomain.CurrentDomain.GetAssemblies())
-            {
-                realProviderType = assembly.GetType(realProviderTypeName);
-                if (realProviderType != null)
-                    break;
-            }
-            if (realProviderType == null)
-            {
-                throw new TypeLoadException("The type '" + realProviderTypeName + "' could not be found. "
-                                            + "Please make sure that either the type name is a fully qualified type name including assembly or "
-                                            + "it is located in one of the referenced assemblies.");
-            }
-
-            if (!typeof (MembershipProvider).IsAssignableFrom(realProviderType))
-                throw new InvalidOperationException("The specified type '" + realProviderType.FullName + "' doesn't derive from MembershipProvider.");
-
-            var container = GetContainer();
-            if (!container.IsRegistered(realProviderType))
-            {
-                throw new InvalidOperationException("The type '" + realProviderType.FullName + "' couldn't be resolved in the DI container. "
-                                                    + "Please make sure it is registered with that exact type.");
-            }
-            _realProvider = (MembershipProvider) container.Resolve(realProviderType);
-        }
-
-        public override MembershipUser CreateUser(string username, string password, string email, string passwordQuestion, string passwordAnswer,
-                bool isApproved, object providerUserKey, out MembershipCreateStatus status)
-        {
-            return _realProvider.CreateUser(username, password, email, passwordQuestion, passwordAnswer, isApproved, providerUserKey, out status);
+            return _realProvider.ChangePassword(username, oldPassword, newPassword);
         }
 
         public override bool ChangePasswordQuestionAndAnswer(string username, string password, string newPasswordQuestion, string newPasswordAnswer)
@@ -131,34 +76,61 @@ namespace fd.Base.AutofacMvc
             return _realProvider.ChangePasswordQuestionAndAnswer(username, password, newPasswordQuestion, newPasswordAnswer);
         }
 
+        public override MembershipUser CreateUser(
+            string username, 
+            string password, 
+            string email, 
+            string passwordQuestion, 
+            string passwordAnswer, 
+            bool isApproved, 
+            object providerUserKey, 
+            out MembershipCreateStatus status)
+        {
+            return _realProvider.CreateUser(username, password, email, passwordQuestion, passwordAnswer, isApproved, providerUserKey, out status);
+        }
+
+        public override bool DeleteUser(string username, bool deleteAllRelatedData)
+        {
+            return _realProvider.DeleteUser(username, deleteAllRelatedData);
+        }
+
+        public override MembershipUserCollection FindUsersByEmail(string emailToMatch, int pageIndex, int pageSize, out int totalRecords)
+        {
+            return _realProvider.FindUsersByEmail(emailToMatch, pageIndex, pageSize, out totalRecords);
+        }
+
+        public override MembershipUserCollection FindUsersByName(string usernameToMatch, int pageIndex, int pageSize, out int totalRecords)
+        {
+            return _realProvider.FindUsersByEmail(usernameToMatch, pageIndex, pageSize, out totalRecords);
+        }
+
+        public override MembershipUserCollection GetAllUsers(int pageIndex, int pageSize, out int totalRecords)
+        {
+            return _realProvider.GetAllUsers(pageIndex, pageSize, out totalRecords);
+        }
+
+        public IComponentContext GetContainer()
+        {
+            var context = GetHttpContext();
+            var provider = context.ApplicationInstance as IContainerProvider;
+            if (provider == null)
+                throw new Exception("The global HttpApplication instance needs to implement " + typeof(IContainerProvider).FullName);
+            return provider.Get();
+        }
+
+        public override int GetNumberOfUsersOnline()
+        {
+            return _realProvider.GetNumberOfUsersOnline();
+        }
+
         public override string GetPassword(string username, string answer)
         {
             return _realProvider.GetPassword(username, answer);
         }
 
-        public override bool ChangePassword(string username, string oldPassword, string newPassword)
+        public T GetRealProvider<T>() where T : MembershipProvider
         {
-            return _realProvider.ChangePassword(username, oldPassword, newPassword);
-        }
-
-        public override string ResetPassword(string username, string answer)
-        {
-            return _realProvider.ResetPassword(username, answer);
-        }
-
-        public override void UpdateUser(MembershipUser user)
-        {
-            _realProvider.UpdateUser(user);
-        }
-
-        public override bool ValidateUser(string username, string password)
-        {
-            return _realProvider.ValidateUser(username, password);
-        }
-
-        public override bool UnlockUser(string userName)
-        {
-            return _realProvider.UnlockUser(userName);
+            return (T)_realProvider;
         }
 
         public override MembershipUser GetUser(object providerUserKey, bool userIsOnline)
@@ -176,29 +148,68 @@ namespace fd.Base.AutofacMvc
             return _realProvider.GetUserNameByEmail(email);
         }
 
-        public override bool DeleteUser(string username, bool deleteAllRelatedData)
+        public override void Initialize(string name, NameValueCollection config)
         {
-            return _realProvider.DeleteUser(username, deleteAllRelatedData);
+            base.Initialize(name, config);
+            var realProviderTypeName = config["realProviderType"];
+            if (string.IsNullOrWhiteSpace(realProviderTypeName))
+                throw new Exception("Please configure the providerId from the membership provider " + name);
+            Type realProviderType = null;
+            foreach (var assembly in AppDomain.CurrentDomain.GetAssemblies())
+            {
+                realProviderType = assembly.GetType(realProviderTypeName);
+                if (realProviderType != null)
+                    break;
+            }
+
+            if (realProviderType == null)
+            {
+                throw new TypeLoadException(
+                    "The type '" + realProviderTypeName + "' could not be found. "
+                    + "Please make sure that either the type name is a fully qualified type name including assembly or "
+                    + "it is located in one of the referenced assemblies.");
+            }
+
+            if (!typeof(MembershipProvider).IsAssignableFrom(realProviderType))
+                throw new InvalidOperationException("The specified type '" + realProviderType.FullName + "' doesn't derive from MembershipProvider.");
+
+            var container = GetContainer();
+            if (!container.IsRegistered(realProviderType))
+            {
+                throw new InvalidOperationException(
+                    "The type '" + realProviderType.FullName + "' couldn't be resolved in the DI container. "
+                    + "Please make sure it is registered with that exact type.");
+            }
+
+            _realProvider = (MembershipProvider)container.Resolve(realProviderType);
         }
 
-        public override MembershipUserCollection GetAllUsers(int pageIndex, int pageSize, out int totalRecords)
+        public override string ResetPassword(string username, string answer)
         {
-            return _realProvider.GetAllUsers(pageIndex, pageSize, out totalRecords);
+            return _realProvider.ResetPassword(username, answer);
         }
 
-        public override int GetNumberOfUsersOnline()
+        public override bool UnlockUser(string userName)
         {
-            return _realProvider.GetNumberOfUsersOnline();
+            return _realProvider.UnlockUser(userName);
         }
 
-        public override MembershipUserCollection FindUsersByName(string usernameToMatch, int pageIndex, int pageSize, out int totalRecords)
+        public override void UpdateUser(MembershipUser user)
         {
-            return _realProvider.FindUsersByEmail(usernameToMatch, pageIndex, pageSize, out totalRecords);
+            _realProvider.UpdateUser(user);
         }
 
-        public override MembershipUserCollection FindUsersByEmail(string emailToMatch, int pageIndex, int pageSize, out int totalRecords)
+        public override bool ValidateUser(string username, string password)
         {
-            return _realProvider.FindUsersByEmail(emailToMatch, pageIndex, pageSize, out totalRecords);
+            return _realProvider.ValidateUser(username, password);
+        }
+
+        private static HttpContext GetHttpContext()
+        {
+            var context = HttpContext.Current;
+            if (context == null)
+                throw new InvalidOperationException("No HttpContext");
+            return context;
         }
     }
 }

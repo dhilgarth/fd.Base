@@ -1,5 +1,4 @@
 ﻿using System.Reflection;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following 
@@ -13,15 +12,12 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyCopyright("Copyright © fire-development Ltd. 2011")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
-
 // Setting ComVisible to false makes the types in this assembly not visible 
 // to COM components.  If you need to access a type in this assembly from 
 // COM, set the ComVisible attribute to true on that type.
 [assembly: ComVisible(false)]
-
 // The following GUID is for the ID of the typelib if this project is exposed to COM
 [assembly: Guid("ad60e2d9-995e-42e6-9c4e-2f4191761fcd")]
-
 // Version information for an assembly consists of the following four values:
 //
 //      Major Version

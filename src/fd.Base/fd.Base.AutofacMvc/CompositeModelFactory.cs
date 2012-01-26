@@ -23,18 +23,6 @@ namespace fd.Base.AutofacMvc
             }
         }
 
-        #region IModelFactory Members
-
-        public bool Supports(Type modelType)
-        {
-            return _modelFactories.ContainsKey(modelType);
-        }
-
-        public IEnumerable<Type> GetSupportedTypes()
-        {
-            return _modelFactories.Keys;
-        }
-
         public object Create(Type modelType)
         {
             IModelFactory modelFactory;
@@ -43,6 +31,14 @@ namespace fd.Base.AutofacMvc
             throw new InvalidOperationException("The model type '" + modelType + "' is not supported by any model factory.");
         }
 
-        #endregion
+        public IEnumerable<Type> GetSupportedTypes()
+        {
+            return _modelFactories.Keys;
+        }
+
+        public bool Supports(Type modelType)
+        {
+            return _modelFactories.ContainsKey(modelType);
+        }
     }
 }

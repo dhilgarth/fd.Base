@@ -4,16 +4,12 @@ using NHibernate.Tool.hbm2ddl;
 
 namespace fd.Base.NHibernate
 {
-    /// <summary>
-    /// Drops and re-creates the schema.
-    /// </summary>
+    /// <summary>Drops and re-creates the schema.</summary>
     public class SchemaRecreator : IRawNHibernateConfigChanger
     {
         private readonly bool _outputSql;
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="SchemaRecreator"/> class.
-        /// </summary>
+        /// <summary>Initializes a new instance of the <see cref="SchemaRecreator" /> class.</summary>
         /// <param name="outputSql">
         /// If set to <c>true</c> outputs the generated SQL to files in the directory <c>NHibernate SQL</c> in the users temp directory.
         /// </param>
@@ -22,12 +18,8 @@ namespace fd.Base.NHibernate
             _outputSql = outputSql;
         }
 
-        /// <summary>
-        /// Changes the raw NHibernate config.
-        /// </summary>
-        /// <param name="config">
-        /// The configuration to change.
-        /// </param>
+        /// <summary>Changes the raw NHibernate config.</summary>
+        /// <param name="config">The configuration to change.</param>
         public void ChangeRawConfig(Configuration config)
         {
             var schemaExport = new SchemaExport(config);

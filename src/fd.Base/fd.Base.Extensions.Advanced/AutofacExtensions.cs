@@ -12,17 +12,11 @@ using fd.Base.Extensions.Simple;
 
 namespace fd.Base.Extensions.Advanced
 {
-    /// <summary>
-    /// Contains extension methods related to Autofac.
-    /// </summary>
+    /// <summary>Contains extension methods related to Autofac.</summary>
     public static class AutofacExtensions
     {
-        /// <summary>
-        /// Configures the auto mapper using all registered <see cref="IAutoMapperSetup"/>.
-        /// </summary>
-        /// <param name="container">
-        /// The Autofac container used to resolve the registered instances.
-        /// </param>
+        /// <summary>Configures the auto mapper using all registered <see cref="IAutoMapperSetup" /> .</summary>
+        /// <param name="container">The Autofac container used to resolve the registered instances.</param>
         public static void ConfigureAutoMapper(this IComponentContext container)
         {
             foreach (var autoMapperSetup in container.Resolve<IEnumerable<IAutoMapperSetup>>())
@@ -30,17 +24,12 @@ namespace fd.Base.Extensions.Advanced
         }
 
         /// <summary>
-        /// Creates a registration builder for all assemblies in the path of the executing assembly that conform to the specified search patterns.
+        /// Creates a registration <paramref name="builder"/> for all assemblies in the path of the executing assembly that conform to the specified search
+        /// patterns.
         /// </summary>
-        /// <param name="builder">
-        /// The container builder to create the registration builder for.
-        /// </param>
-        /// <param name="searchPatterns">
-        /// The search patterns the assemblies must satisfy at least one from.
-        /// </param>
-        /// <returns>
-        /// A registration builder containing the matching assemblies.
-        /// </returns>
+        /// <param name="builder">The container builder to create the registration builder for.</param>
+        /// <param name="searchPatterns">The search patterns the assemblies must satisfy at least one from.</param>
+        /// <returns>A registration <paramref name="builder"/> containing the matching assemblies.</returns>
         public static IRegistrationBuilder<object, ScanningActivatorData, DynamicRegistrationStyle> RegisterAssemblyTypesOf(
             this ContainerBuilder builder, params string[] searchPatterns)
         {
@@ -48,20 +37,13 @@ namespace fd.Base.Extensions.Advanced
         }
 
         /// <summary>
-        /// Creates a registration builder for all assemblies in the specified path that conform to the specified search patterns.
+        /// Creates a registration <paramref name="builder"/> for all assemblies in the specified <paramref name="path"/> that conform to the specified search
+        /// patterns.
         /// </summary>
-        /// <param name="builder">
-        /// The container builder to create the registration builder for.
-        /// </param>
-        /// <param name="path">
-        /// The path the assemblies are located in.
-        /// </param>
-        /// <param name="searchPatterns">
-        /// The search patterns the assemblies must satisfy at least one from.
-        /// </param>
-        /// <returns>
-        /// A registration builder containing the matching assemblies.
-        /// </returns>
+        /// <param name="builder">The container builder to create the registration builder for.</param>
+        /// <param name="path">The path the assemblies are located in.</param>
+        /// <param name="searchPatterns">The search patterns the assemblies must satisfy at least one from.</param>
+        /// <returns>A registration <paramref name="builder"/> containing the matching assemblies.</returns>
         public static IRegistrationBuilder<object, ScanningActivatorData, DynamicRegistrationStyle> RegisterAssemblyTypesOfPath(
             this ContainerBuilder builder, string path, params string[] searchPatterns)
         {
@@ -71,37 +53,28 @@ namespace fd.Base.Extensions.Advanced
             return builder.RegisterAssemblyTypes(assemblies.ToArray());
         }
 
-        /// <summary>
-        /// Registers the default types provided by this library.
-        /// </summary>
-        /// <param name="builder">
-        /// The container builder to register the types with.
-        /// </param>
+        /// <summary>Registers the default types provided by this library.</summary>
+        /// <param name="builder">The container builder to register the types with.</param>
         public static void RegisterDefault(this ContainerBuilder builder)
         {
             builder.RegisterAssemblyTypesOf("fd.Base.*.dll").RegisterDefaultTypes();
             builder.Register(c => c.Resolve<ILocalDataFactory>().Create()).SingleInstance();
         }
 
-        /// <summary>
-        /// Registers the types conforming to the default naming conventions in the provided assemblies.
-        /// </summary>
+        /// <summary>Registers the types conforming to the default naming conventions in the provided assemblies.</summary>
         /// <param name="builder">The registration builder that contains the assemblies.</param>
-        /// <param name="values">The strings the type names must end with.</param>
-        public static void RegisterTypesEndingWith(this IRegistrationBuilder<object, ScanningActivatorData, DynamicRegistrationStyle> builder, params string[] values)
-        {
-            builder.Where(x => x.Name.EndsWithAny(values)).AsImplementedInterfaces().SingleInstance();
-        }
-
-        /// <summary>
-        /// Registers the types conforming to the default naming conventions in the provided assemblies.
-        /// </summary>
-        /// <param name="builder">
-        /// The registration builder that contains the assemblies.
-        /// </param>
         public static void RegisterDefaultTypes(this IRegistrationBuilder<object, ScanningActivatorData, DynamicRegistrationStyle> builder)
         {
             builder.RegisterTypesEndingWith("Service", "Factory", "Provider", "Builder", "Setup", "Generator", "Configuration");
+        }
+
+        /// <summary>Registers the types conforming to the default naming conventions in the provided assemblies.</summary>
+        /// <param name="builder">The registration builder that contains the assemblies.</param>
+        /// <param name="values">The strings the type names must end with.</param>
+        public static void RegisterTypesEndingWith(
+            this IRegistrationBuilder<object, ScanningActivatorData, DynamicRegistrationStyle> builder, params string[] values)
+        {
+            builder.Where(x => x.Name.EndsWithAny(values)).AsImplementedInterfaces().SingleInstance();
         }
     }
 }

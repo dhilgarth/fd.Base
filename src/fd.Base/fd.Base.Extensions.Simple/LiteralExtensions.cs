@@ -2,14 +2,10 @@
 
 namespace fd.Base.Extensions.Simple
 {
-    /// <summary>
-    /// Provides literal extension methods.
-    /// </summary>
+    /// <summary>Provides literal extension methods.</summary>
     public static class LiteralExtensions
     {
-        /// <summary>
-        /// Returns a TimeSpan representing the specified number of days.
-        /// </summary>
+        /// <summary>Returns a TimeSpan representing the specified number of days.</summary>
         /// <param name="value">The value.</param>
         /// <returns>The TimeSpan.</returns>
         public static TimeSpan Days(this int value)
@@ -17,9 +13,7 @@ namespace fd.Base.Extensions.Simple
             return TimeSpan.FromDays(value);
         }
 
-        /// <summary>
-        /// Returns a TimeSpan representing the specified number of days.
-        /// </summary>
+        /// <summary>Returns a TimeSpan representing the specified number of days.</summary>
         /// <param name="value">The value.</param>
         /// <returns>The TimeSpan.</returns>
         public static TimeSpan Days(this double value)
@@ -27,9 +21,7 @@ namespace fd.Base.Extensions.Simple
             return TimeSpan.FromDays(value);
         }
 
-        /// <summary>
-        /// Returns a TimeSpan representing the specified number of hours.
-        /// </summary>
+        /// <summary>Returns a TimeSpan representing the specified number of hours.</summary>
         /// <param name="value">The value.</param>
         /// <returns>The TimeSpan.</returns>
         public static TimeSpan Hours(this int value)
@@ -37,9 +29,7 @@ namespace fd.Base.Extensions.Simple
             return TimeSpan.FromHours(value);
         }
 
-        /// <summary>
-        /// Returns a TimeSpan representing the specified number of hours.
-        /// </summary>
+        /// <summary>Returns a TimeSpan representing the specified number of hours.</summary>
         /// <param name="value">The value.</param>
         /// <returns>The TimeSpan.</returns>
         public static TimeSpan Hours(this double value)
@@ -47,9 +37,7 @@ namespace fd.Base.Extensions.Simple
             return TimeSpan.FromHours(value);
         }
 
-        /// <summary>
-        /// Returns a TimeSpan representing the specified number of milliseconds.
-        /// </summary>
+        /// <summary>Returns a TimeSpan representing the specified number of milliseconds.</summary>
         /// <param name="value">The value.</param>
         /// <returns>The TimeSpan.</returns>
         public static TimeSpan Milliseconds(this int value)
@@ -57,9 +45,7 @@ namespace fd.Base.Extensions.Simple
             return TimeSpan.FromMilliseconds(value);
         }
 
-        /// <summary>
-        /// Returns a TimeSpan representing the specified number of milliseconds.
-        /// </summary>
+        /// <summary>Returns a TimeSpan representing the specified number of milliseconds.</summary>
         /// <param name="value">The value.</param>
         /// <returns>The TimeSpan.</returns>
         public static TimeSpan Milliseconds(this double value)
@@ -67,9 +53,7 @@ namespace fd.Base.Extensions.Simple
             return TimeSpan.FromMilliseconds(value);
         }
 
-        /// <summary>
-        /// Returns a TimeSpan representing the specified number of minutes.
-        /// </summary>
+        /// <summary>Returns a TimeSpan representing the specified number of minutes.</summary>
         /// <param name="value">The value.</param>
         /// <returns>The TimeSpan.</returns>
         public static TimeSpan Minutes(this int value)
@@ -77,9 +61,7 @@ namespace fd.Base.Extensions.Simple
             return TimeSpan.FromMinutes(value);
         }
 
-        /// <summary>
-        /// Returns a TimeSpan representing the specified number of minutes.
-        /// </summary>
+        /// <summary>Returns a TimeSpan representing the specified number of minutes.</summary>
         /// <param name="value">The value.</param>
         /// <returns>The TimeSpan.</returns>
         public static TimeSpan Minutes(this double value)
@@ -87,9 +69,7 @@ namespace fd.Base.Extensions.Simple
             return TimeSpan.FromMinutes(value);
         }
 
-        /// <summary>
-        /// Returns a TimeSpan representing the specified number of seconds.
-        /// </summary>
+        /// <summary>Returns a TimeSpan representing the specified number of seconds.</summary>
         /// <param name="value">The value.</param>
         /// <returns>The TimeSpan.</returns>
         public static TimeSpan Seconds(this int value)
@@ -97,9 +77,7 @@ namespace fd.Base.Extensions.Simple
             return TimeSpan.FromSeconds(value);
         }
 
-        /// <summary>
-        /// Returns a TimeSpan representing the specified number of seconds.
-        /// </summary>
+        /// <summary>Returns a TimeSpan representing the specified number of seconds.</summary>
         /// <param name="value">The value.</param>
         /// <returns>The TimeSpan.</returns>
         public static TimeSpan Seconds(this double value)

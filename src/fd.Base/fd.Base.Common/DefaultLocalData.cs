@@ -5,7 +5,13 @@ namespace fd.Base.Common
 {
     public class DefaultLocalData : ILocalData
     {
-        [ThreadStatic] private static Hashtable _localData;
+        [ThreadStatic]
+        private static Hashtable _localData;
+
+        public int Count
+        {
+            get { return LocalHashtable.Count; }
+        }
 
         private static Hashtable LocalHashtable
         {
@@ -17,24 +23,15 @@ namespace fd.Base.Common
             }
         }
 
-        #region ILocalData Members
-
         public object this[object key]
         {
             get { return LocalHashtable[key]; }
             set { LocalHashtable[key] = value; }
         }
 
-        public int Count
-        {
-            get { return LocalHashtable.Count; }
-        }
-
         public void Clear()
         {
             LocalHashtable.Clear();
         }
-
-        #endregion
     }
 }

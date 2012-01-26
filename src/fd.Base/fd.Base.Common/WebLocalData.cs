@@ -7,6 +7,11 @@ namespace fd.Base.Common
     {
         private static readonly object LocalDataHashtableKey = new object();
 
+        public int Count
+        {
+            get { return LocalHashtable.Count; }
+        }
+
         private static Hashtable LocalHashtable
         {
             get
@@ -17,11 +22,10 @@ namespace fd.Base.Common
                     webHashtable = new Hashtable();
                     HttpContext.Current.Items[LocalDataHashtableKey] = webHashtable;
                 }
+
                 return webHashtable;
             }
         }
-
-        #region ILocalData Members
 
         public object this[object key]
         {
@@ -29,16 +33,9 @@ namespace fd.Base.Common
             set { LocalHashtable[key] = value; }
         }
 
-        public int Count
-        {
-            get { return LocalHashtable.Count; }
-        }
-
         public void Clear()
         {
             LocalHashtable.Clear();
         }
-
-        #endregion
     }
 }

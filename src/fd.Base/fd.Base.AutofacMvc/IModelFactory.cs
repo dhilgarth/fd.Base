@@ -5,8 +5,8 @@ namespace fd.Base.AutofacMvc
 {
     public interface IModelFactory
     {
-        bool Supports(Type modelType);
-        IEnumerable<Type> GetSupportedTypes();
         object Create(Type modelType);
+        IEnumerable<Type> GetSupportedTypes();
+        bool Supports(Type modelType);
     }
 }

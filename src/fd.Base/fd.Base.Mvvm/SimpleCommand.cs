@@ -8,12 +8,8 @@ namespace fd.Base.Mvvm
     /// </summary>
     public class SimpleCommand : ICommand
     {
-        #region Variables
-
         private readonly Func<bool> _canExecute;
         private readonly Action _execute;
-
-        #endregion
 
         /// <summary>
         ///   Initializes a new instance of the <see cref="SimpleCommand" /> class.
@@ -40,8 +36,6 @@ namespace fd.Base.Mvvm
             _canExecute = canExecute;
         }
 
-        #region ICommand Members
-
         /// <summary>
         ///   Occurs when changes occur that affect whether or not the command should execute.
         /// </summary>
@@ -65,8 +59,6 @@ namespace fd.Base.Mvvm
         {
             _execute();
         }
-
-        #endregion
 
         /// <summary>
         ///   Raises the <see cref="CanExecuteChanged" /> event.

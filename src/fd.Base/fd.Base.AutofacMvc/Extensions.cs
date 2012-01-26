@@ -4,14 +4,10 @@ using Autofac;
 
 namespace fd.Base.AutofacMvc
 {
-    /// <summary>
-    /// Contains extension methods related to ASP.NET MVC.
-    /// </summary>
+    /// <summary>Contains extension methods related to ASP.NET MVC.</summary>
     public static class Extensions
     {
-        /// <summary>
-        /// Registers the default ASP.NET MVC types with the specified container builder.
-        /// </summary>
+        /// <summary>Registers the default ASP.NET MVC types with the specified container builder.</summary>
         /// <param name="builder">The builder.</param>
         public static void RegisterMvc(this ContainerBuilder builder)
         {

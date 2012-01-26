@@ -14,16 +14,12 @@ namespace fd.Base.AutofacMvc
             _modelFactory = modelFactory;
         }
 
-        #region IModelBinderProvider Members
-
         public IModelBinder GetBinder(Type modelType)
         {
             if (_modelFactory.Supports(modelType))
                 return this;
             return null;
         }
-
-        #endregion
 
         protected override object CreateModel(ControllerContext controllerContext, ModelBindingContext bindingContext, Type modelType)
         {
