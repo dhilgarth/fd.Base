@@ -35,10 +35,12 @@
     <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DebugExtensions.cs" />
     <Compile Include="EnumerableExtensions.cs" />
     <Compile Include="GeneralExtensions.cs" />
     <Compile Include="LiteralExtensions.cs" />
