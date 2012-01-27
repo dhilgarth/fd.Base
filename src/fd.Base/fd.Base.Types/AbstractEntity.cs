@@ -1,6 +1,6 @@
 namespace fd.Base.Types
 {
-    /// <summary>The <see langword="abstract"/> entity.</summary>
+    /// <summary>The <see langword="abstract" /> entity.</summary>
     /// <typeparam name="TIdentity">The type of the identiy property.</typeparam>
     public abstract class AbstractEntity<TIdentity>
     {
@@ -11,7 +11,7 @@ namespace fd.Base.Types
 
         /// <summary>Compare equality through Id.</summary>
         /// <remarks>Two entities are equals if they are of the same hierarcy tree/sub-tree and has same id.</remarks>
-        /// <param name="other"><see cref="Entity"/> to compare.</param>
+        /// <param name="other"><see cref="Entity" /> to compare.</param>
         /// <returns>True is are equals.</returns>
         public virtual bool Equals(AbstractEntity<TIdentity> other)
         {

@@ -16,7 +16,7 @@
         {
         }
 
-        /// <summary>Performs an <see langword="implicit"/> conversion from <see cref="System.Int32" /> to <see cref="Percentage" /> .</summary>
+        /// <summary>Performs an <see langword="implicit" /> conversion from <see cref="System.Int32" /> to <see cref="Percentage" /> .</summary>
         /// <param name="value">The value.</param>
         /// <returns>The result of the conversion.</returns>
         public static implicit operator Percentage(double value)

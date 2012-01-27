@@ -8,8 +8,8 @@ namespace fd.Base.Extensions.Simple
     /// <summary>Extension methods to simplify debugging.</summary>
     public static class DebugExtensions
     {
-        private static ConstructorInfo _xhtmlWriterConstructor;
         private static MethodInfo _writeDepthMethod;
+        private static ConstructorInfo _xhtmlWriterConstructor;
 
         /// <summary>Writes an object's properties to HTML and displays them in default browser.</summary>
         /// <remarks>
@@ -57,9 +57,9 @@ namespace fd.Base.Extensions.Simple
                 {
                     var linqPadAssembly = Assembly.LoadFile(pathToLinqPadAssembly);
                     var type = linqPadAssembly.GetType(@"LINQPad.ObjectGraph.Formatters.XhtmlWriter");
-                    _xhtmlWriterConstructor =
-                        type.GetConstructor(new[] { typeof(bool), typeof(bool) });
-                    _writeDepthMethod = type.GetMethod("WriteDepth", new Type[] { typeof(object), typeof(int?) });
+                    _xhtmlWriterConstructor = type.GetConstructor(new[] { typeof(bool), typeof(bool) });
+                    _writeDepthMethod = type.GetMethod("WriteDepth", new[] { typeof(object), typeof(int?) });
+
                     // ..GetMethod(
                     // @"CreateXhtmlWriter", BindingFlags.Static | BindingFlags.Public, null, new[] { typeof(bool) }, new ParameterModifier[] { });
                 }

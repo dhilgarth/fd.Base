@@ -5,17 +5,17 @@ using System.Reflection;
 namespace fd.Base.Common
 {
     /// <summary>
-    /// A <see langword="static"/> class that simplifies <see langword="null"/> checks of parameters, especially in constructors when calling the base
+    /// A <see langword="static" /> class that simplifies <see langword="null" /> checks of parameters, especially in constructors when calling the base
     /// implementation or another constructor.
     /// </summary>
     public static class Guard
     {
         /// <summary>Throws an <see cref="ArgumentNullException" /> if the variable in the specified expression is <c>null</c> .</summary>
         /// <remarks>
-        /// This is pretty slow, because it compiles the supplied expression to provide the return value. If performance is critical, use
-        /// <see cref="Guard.NotNull``1(``0,System.Linq.Expressions.Expression{System.Func{``0}})" /> instead.
+        /// This is pretty slow, because it compiles the supplied expression to provide the return value. If performance is critical, use <see cref="Guard" />
+        /// instead.
         /// </remarks>
-        /// <typeparam name="T">The type of the variable that should be <see langword="checked"/> for <c>null</c> .</typeparam>
+        /// <typeparam name="T">The type of the variable that should be <see langword="checked" /> for <c>null</c> .</typeparam>
         /// <param name="parameterExpression">The parameter expression that defines the variable to check.</param>
         /// <returns>The value of the variable in the expression.</returns>
         public static T AgainstNull<T>(Expression<Func<T>> parameterExpression) where T : class
@@ -27,10 +27,8 @@ namespace fd.Base.Common
         }
 
         /// <summary>Throws an <see cref="ArgumentNullException" /> if the object on which this extension method is called is <c>null</c> .</summary>
-        /// <remarks>
-        /// Use this instead of <see cref="Guard.AgainstNull``1(System.Linq.Expressions.Expression{System.Func{``0}})" /> , if performance is an issue.
-        /// </remarks>
-        /// <typeparam name="T">The type of the variable that should be <see langword="checked"/> for <c>null</c> .</typeparam>
+        /// <remarks>Use this instead of <see cref="Guard" /> , if performance is an issue.</remarks>
+        /// <typeparam name="T">The type of the variable that should be <see langword="checked" /> for <c>null</c> .</typeparam>
         /// <param name="this">The object that is not allowed to be null.</param>
         /// <param name="parameterExpression">The parameter expression that defines the variable to check.</param>
         /// <returns>The value of the variable in the expression.</returns>

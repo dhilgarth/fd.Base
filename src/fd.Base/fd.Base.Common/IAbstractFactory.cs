@@ -2,8 +2,8 @@ using System;
 
 namespace fd.Base.Common
 {
-    /// <summary>Represents an <see langword="abstract"/> factory.</summary>
-    /// <typeparam name="T">The type this <see langword="abstract"/> factory creates.</typeparam>
+    /// <summary>Represents an <see langword="abstract" /> factory.</summary>
+    /// <typeparam name="T">The type this <see langword="abstract" /> factory creates.</typeparam>
     public interface IAbstractFactory<out T> : IAbstractFactory
     {
         /// <summary>Creates a new instance.</summary>
@@ -11,7 +11,7 @@ namespace fd.Base.Common
         new T CreateInstance();
     }
 
-    /// <summary>Represents an <see langword="abstract"/> factory.</summary>
+    /// <summary>Represents an <see langword="abstract" /> factory.</summary>
     public interface IAbstractFactory
     {
         /// <summary>Gets the type supported by this factory.</summary>

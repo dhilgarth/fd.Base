@@ -16,7 +16,7 @@ namespace fd.Base.Types
         {
         }
 
-        /// <summary>Performs an <see langword="implicit"/> conversion from <see cref="System.Int32" /> to <see cref="UnconstrainedPercentage" /> .</summary>
+        /// <summary>Performs an <see langword="implicit" /> conversion from <see cref="System.Int32" /> to <see cref="UnconstrainedPercentage" /> .</summary>
         /// <param name="value">The value.</param>
         /// <returns>The result of the conversion.</returns>
         public static implicit operator UnconstrainedPercentage(double value)

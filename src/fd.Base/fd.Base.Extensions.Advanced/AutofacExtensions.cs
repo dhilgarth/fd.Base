@@ -24,12 +24,12 @@ namespace fd.Base.Extensions.Advanced
         }
 
         /// <summary>
-        /// Creates a registration <paramref name="builder"/> for all assemblies in the path of the executing assembly that conform to the specified search
+        /// Creates a registration <paramref name="builder" /> for all assemblies in the path of the executing assembly that conform to the specified search
         /// patterns.
         /// </summary>
         /// <param name="builder">The container builder to create the registration builder for.</param>
         /// <param name="searchPatterns">The search patterns the assemblies must satisfy at least one from.</param>
-        /// <returns>A registration <paramref name="builder"/> containing the matching assemblies.</returns>
+        /// <returns>A registration <paramref name="builder" /> containing the matching assemblies.</returns>
         public static IRegistrationBuilder<object, ScanningActivatorData, DynamicRegistrationStyle> RegisterAssemblyTypesOf(
             this ContainerBuilder builder, params string[] searchPatterns)
         {
@@ -37,13 +37,13 @@ namespace fd.Base.Extensions.Advanced
         }
 
         /// <summary>
-        /// Creates a registration <paramref name="builder"/> for all assemblies in the specified <paramref name="path"/> that conform to the specified search
+        /// Creates a registration <paramref name="builder" /> for all assemblies in the specified <paramref name="path" /> that conform to the specified search
         /// patterns.
         /// </summary>
         /// <param name="builder">The container builder to create the registration builder for.</param>
         /// <param name="path">The path the assemblies are located in.</param>
         /// <param name="searchPatterns">The search patterns the assemblies must satisfy at least one from.</param>
-        /// <returns>A registration <paramref name="builder"/> containing the matching assemblies.</returns>
+        /// <returns>A registration <paramref name="builder" /> containing the matching assemblies.</returns>
         public static IRegistrationBuilder<object, ScanningActivatorData, DynamicRegistrationStyle> RegisterAssemblyTypesOfPath(
             this ContainerBuilder builder, string path, params string[] searchPatterns)
         {

@@ -17,7 +17,7 @@ namespace fd.Base.Extensions.Simple
 
         /// <summary>Determines whether the specified string is <c>null</c> or <see cref="System.String.Empty" /> .</summary>
         /// <param name="this">The string to check.</param>
-        /// <returns><c>true</c> if specified string is <see langword="null"/> or empty; otherwise, <c>false</c> .</returns>
+        /// <returns><c>true</c> if specified string is <see langword="null" /> or empty; otherwise, <c>false</c> .</returns>
         public static bool IsNullOrEmpty(this string @this)
         {
             return string.IsNullOrEmpty(@this);

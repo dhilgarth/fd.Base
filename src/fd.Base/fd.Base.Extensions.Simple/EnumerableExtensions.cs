@@ -17,9 +17,8 @@ namespace fd.Base.Extensions.Simple
 
         /// <summary>
         /// Converts an <see cref="System.Collections.Generic.IEnumerable`1" /> to an <see cref="System.Collections.Generic.IList`1" /> . If the
-        /// <paramref name="enumerable"/> already is in fact a <see cref="System.Collections.Generic.IList`1" /> , no new
-        /// <see cref="System.Collections.Generic.IList`1" /> will be created. Otherwise,
-        /// <see cref="Enumerable.ToList``1(System.Collections.Generic.IEnumerable{``0})" /> will be used.
+        /// <paramref name="enumerable" /> already is in fact a <see cref="System.Collections.Generic.IList`1" /> , no new
+        /// <see cref="System.Collections.Generic.IList`1" /> will be created. Otherwise, <see cref="Enumerable" /> will be used.
         /// </summary>
         /// <typeparam name="T">The type of the objects in the <see cref="System.Collections.Generic.IEnumerable`1" /> .</typeparam>
         /// <param name="enumerable">The enumerable.</param>

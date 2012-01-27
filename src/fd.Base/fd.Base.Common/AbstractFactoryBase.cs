@@ -2,8 +2,8 @@ using System;
 
 namespace fd.Base.Common
 {
-    /// <summary>The base class for the <see langword="abstract"/> factories.</summary>
-    /// <typeparam name="T">The type the <see langword="abstract"/> factory supports.</typeparam>
+    /// <summary>The base class for the <see langword="abstract" /> factories.</summary>
+    /// <typeparam name="T">The type the <see langword="abstract" /> factory supports.</typeparam>
     public abstract class AbstractFactoryBase<T> : IAbstractFactory<T>
     {
         /// <summary>Gets the type supported by this factory.</summary>

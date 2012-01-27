@@ -16,7 +16,7 @@ namespace fd.Base.Types
         {
         }
 
-        /// <summary>Performs an <see langword="implicit"/> conversion from <see cref="System.Int32" /> to <see cref="Digit" /> .</summary>
+        /// <summary>Performs an <see langword="implicit" /> conversion from <see cref="System.Int32" /> to <see cref="Digit" /> .</summary>
         /// <param name="value">The value representing the digit.</param>
         /// <returns>The result of the conversion.</returns>
         public static implicit operator Digit(int value)
@@ -24,9 +24,9 @@ namespace fd.Base.Types
             return new Digit(value);
         }
 
-        /// <summary>Checks whether the specified <paramref name="value"/> represents a valid digit.</summary>
-        /// <param name="value">The value to be <see langword="checked"/> against the constraint.</param>
-        /// <returns><c>true</c> if the supplied <paramref name="value"/> represents a valid digit; otherwise, <c>false</c> .</returns>
+        /// <summary>Checks whether the specified <paramref name="value" /> represents a valid digit.</summary>
+        /// <param name="value">The value to be <see langword="checked" /> against the constraint.</param>
+        /// <returns><c>true</c> if the supplied <paramref name="value" /> represents a valid digit; otherwise, <c>false</c> .</returns>
         private static bool Constraint(int value)
         {
             return value >= 0 && value <= 9;

@@ -6,7 +6,7 @@ namespace fd.Base.NHibernate
     public class MySqlPersistenceProvider : IPersistenceConfigurerProvider
     {
         private readonly string _connectionString;
-        private bool _showSql;
+        private readonly bool _showSql;
 
         /// <summary>Initializes a new instance of the <see cref="MySqlPersistenceProvider" /> class.</summary>
         /// <param name="connectionString">The connection string.</param>
