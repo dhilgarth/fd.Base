@@ -6,6 +6,7 @@ using System.Reflection;
 using Autofac;
 using fd.Base.Common;
 using fd.Base.Extensions.Simple;
+using fd.Base.Types;
 using FluentNHibernate;
 using FluentNHibernate.Cfg;
 using FluentNHibernate.Conventions.Helpers;
@@ -23,6 +24,39 @@ namespace fd.Base.NHibernate
         public static T AddDefault<T>(this SetupConventionFinder<T> conventions)
         {
             return conventions.Add(DefaultCascade.All(), new EnumConvention(), new AllUpperCaseColumnNameConvention(), new AllUpperCaseTableNameConvention());
+        }
+
+        /// <summary>Maps a constant value.</summary>
+        /// <typeparam name="TType">The type for which the constant <paramref name="value" /> should be mapped.</typeparam>
+        /// <typeparam name="TValue">The type of the value.</typeparam>
+        /// <param name="map">The NHibernate mapping object.</param>
+        /// <param name="value">The constant value to map.</param>
+        /// <returns>The property mapping</returns>
+        public static PropertyPart ConstantValue<TType, TValue>(this ClasslikeMapBase<TType> map, TValue value)
+        {
+            var getter = new ConstantValueGetter<TValue>(CreateUniqueMemberName(), value);
+            ConstantValueAccessor.RegisterGetter(typeof(TType), getter);
+
+            var propertyInfo = new GetterSetterPropertyInfo(typeof(TType), typeof(TValue), getter.PropertyName, getter.Method, null);
+
+            var parameter = Expression.Parameter(typeof(TType), "x");
+            var body = Expression.Convert(Expression.Property(parameter, propertyInfo), typeof(object));
+
+            var lambda = Expression.Lambda<Func<TType, object>>(body, parameter);
+
+            return map.Map(lambda).Access.Using(typeof(ConstantValueAccessor));
+        }
+
+        /// <summary>Maps a constant value.</summary>
+        /// <typeparam name="TType">The type for which the constant <paramref name="value" /> should be mapped.</typeparam>
+        /// <typeparam name="TValue">The type of the value.</typeparam>
+        /// <param name="map">The NHibernate mapping object.</param>
+        /// <param name="value">The constant value to map.</param>
+        /// <param name="column">The column to <paramref name="map" /> the constant <paramref name="value" /> to.</param>
+        /// <returns>The property mapping</returns>
+        public static PropertyPart ConstantValue<TType, TValue>(this ClasslikeMapBase<TType> map, TValue value, string column)
+        {
+            return map.ConstantValue(value).Column(column);
         }
 
         public static void KeyColumnFromReference<TChild>(
@@ -84,6 +118,13 @@ namespace fd.Base.NHibernate
         {
             var configurationAssemblies = configurationAssembly.MakeEnumerable().ToList();
             builder.RegisterNHibernate(configurationAssemblies, entityAssembly.MakeEnumerable(), configurationAssemblies, configurationAssemblies);
+        }
+
+        /// <summary>Creates a unique name for the member of a type.</summary>
+        /// <returns>The unique name.</returns>
+        private static string CreateUniqueMemberName()
+        {
+            return "Dummy" + Guid.NewGuid().ToString("N");
         }
     }
 }

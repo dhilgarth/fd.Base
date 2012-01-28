@@ -40,6 +40,7 @@
     <Compile Include="Digit.cs" />
     <Compile Include="Entity.cs" />
     <Compile Include="Extensions.cs" />
+    <Compile Include="GetterSetterPropertyInfo.cs" />
     <Compile Include="Month.cs" />
     <Compile Include="Percentage.cs" />
     <Compile Include="Constrained.cs" />
