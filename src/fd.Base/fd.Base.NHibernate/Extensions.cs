@@ -44,7 +44,7 @@ namespace fd.Base.NHibernate
 
             var lambda = Expression.Lambda<Func<TType, object>>(body, parameter);
 
-            return map.Map(lambda).Access.Using(typeof(ConstantValueAccessor));
+            return map.Map(lambda).Access.Using<ConstantValueAccessor>();
         }
 
         /// <summary>Maps a constant value.</summary>
