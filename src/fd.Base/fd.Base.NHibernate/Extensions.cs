@@ -102,7 +102,7 @@ namespace fd.Base.NHibernate
             IEnumerable<Assembly> conventionAssemblies, 
             IEnumerable<Assembly> overridesAssemblies)
         {
-            builder.RegisterType<NoRawNHibernateConfigChanger>().AsImplementedInterfaces().SingleInstance();
+            builder.RegisterType<NoOpRawNHibernateConfigChanger>().AsImplementedInterfaces().SingleInstance();
             builder.RegisterType<DefaultAutoMappingConfiguration>().AsImplementedInterfaces().SingleInstance();
             builder.RegisterType<DefaultSessionFactoryBuilder>().AsImplementedInterfaces().SingleInstance();
 

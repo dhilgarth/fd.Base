@@ -60,7 +60,7 @@
     <Compile Include="MsSql2008PersistenceProvider.cs" />
     <Compile Include="MySqlPersistenceProvider.cs" />
     <Compile Include="NoOpSetter.cs" />
-    <Compile Include="NoRawNHibernateConfigChanger.cs" />
+    <Compile Include="NoOpRawNHibernateConfigChanger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository.cs" />
     <Compile Include="SchemaDropper.cs" />
