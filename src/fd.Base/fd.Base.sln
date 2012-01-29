@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fd.Base.UnitTestHelpers", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fd.Base.Mvvm", "fd.Base.Mvvm\fd.Base.Mvvm.csproj", "{BCD54774-38A3-4733-AAE8-CA019393383D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fd.Base.Workflow", "fd.Base.Workflow\fd.Base.Workflow.csproj", "{7CC2F564-1B58-47BB-B297-8DA494A8102F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,6 +63,10 @@ Global
 		{BCD54774-38A3-4733-AAE8-CA019393383D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BCD54774-38A3-4733-AAE8-CA019393383D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BCD54774-38A3-4733-AAE8-CA019393383D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CC2F564-1B58-47BB-B297-8DA494A8102F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CC2F564-1B58-47BB-B297-8DA494A8102F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CC2F564-1B58-47BB-B297-8DA494A8102F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CC2F564-1B58-47BB-B297-8DA494A8102F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
