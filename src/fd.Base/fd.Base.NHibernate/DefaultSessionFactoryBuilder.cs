@@ -88,7 +88,7 @@ namespace fd.Base.NHibernate
         protected virtual AutoPersistenceModel CreateAutoMappings(
             IEnumerable<Assembly> entityAssemblies, IEnumerable<Assembly> conventionAssemblies, IEnumerable<Assembly> overridesAssemblies)
         {
-            var mapping = AutoMap.Assemblies(_autoMappingAdjuster, entityAssemblies).Conventions.AddDefault();
+            var mapping = AutoMap.Assemblies(_autoMappingAdjuster, entityAssemblies);
             foreach (var conventionAssembly in conventionAssemblies)
                 mapping = mapping.Conventions.AddAssembly(conventionAssembly);
             foreach (var overridesAssembly in overridesAssemblies)
