@@ -54,6 +54,7 @@
     <Compile Include="ConstantValueAccessor.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="EnumConvention.cs" />
+    <Compile Include="IAutoMappingAdjuster.cs" />
     <Compile Include="IPersistenceConfigurerProvider.cs" />
     <Compile Include="IRawNHibernateConfigChanger.cs" />
     <Compile Include="ISessionFactoryBuilder.cs" />

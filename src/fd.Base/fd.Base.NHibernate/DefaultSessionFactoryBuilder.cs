@@ -11,15 +11,20 @@ namespace fd.Base.NHibernate
     /// <summary>The default session factory builder.</summary>
     public class DefaultSessionFactoryBuilder : ISessionFactoryBuilder
     {
+        private readonly IAutomappingConfiguration _autoMappingConfiguration;
         private readonly IPersistenceConfigurerProvider _persistenceConfigurerProvider;
         private readonly IRawNHibernateConfigChanger _rawNHibernateConfigChanger;
 
         /// <summary>Initializes a new instance of the <see cref="DefaultSessionFactoryBuilder" /> class.</summary>
+        /// <param name="autoMappingConfiguration">The auto-mapping configuration to use.</param>
         /// <param name="persistenceConfigurerProvider">The persistence configurer provider.</param>
         /// <param name="rawNHibernateConfigChanger">The raw N hibernate config changer.</param>
         public DefaultSessionFactoryBuilder(
-            IPersistenceConfigurerProvider persistenceConfigurerProvider, IRawNHibernateConfigChanger rawNHibernateConfigChanger)
+            IAutomappingConfiguration autoMappingConfiguration, 
+            IPersistenceConfigurerProvider persistenceConfigurerProvider, 
+            IRawNHibernateConfigChanger rawNHibernateConfigChanger)
         {
+            _autoMappingConfiguration = autoMappingConfiguration;
             _persistenceConfigurerProvider = persistenceConfigurerProvider;
             _rawNHibernateConfigChanger = rawNHibernateConfigChanger;
         }
@@ -65,6 +70,7 @@ namespace fd.Base.NHibernate
                 throw new ArgumentNullException("overridesAssemblies");
 
             var autoMappings = CreateAutoMappings(entityAssemblies, conventionAssemblies, overridesAssemblies);
+
             return Fluently.Configure().Database(_persistenceConfigurerProvider.Get()).Mappings(
                 m =>
                 {
@@ -72,6 +78,15 @@ namespace fd.Base.NHibernate
                         m.FluentMappings.AddFromAssembly(mappingsAssembly);
                     m.AutoMappings.Add(() => autoMappings);
                 }).ExposeConfiguration(_rawNHibernateConfigChanger.ChangeRawConfig).BuildSessionFactory();
+        }
+
+        /// <summary>Adjusts the auto mappings.</summary>
+        /// <remarks>
+        /// Override in a derived class to be able to define additional parts of the auto-mapping configuration like base classes to include etc.
+        /// </remarks>
+        /// <param name="mapping">The mapping.</param>
+        protected virtual void AdjustAutoMappings(AutoPersistenceModel mapping)
+        {
         }
 
         /// <summary>Creates the auto mappings.</summary>
@@ -82,7 +97,7 @@ namespace fd.Base.NHibernate
         protected virtual AutoPersistenceModel CreateAutoMappings(
             IEnumerable<Assembly> entityAssemblies, IEnumerable<Assembly> conventionAssemblies, IEnumerable<Assembly> overridesAssemblies)
         {
-            var mapping = AutoMap.Assemblies(new DefaultAutoMappingConfiguration(), entityAssemblies).Conventions.AddDefault();
+            var mapping = AutoMap.Assemblies(_autoMappingConfiguration, entityAssemblies).Conventions.AddDefault();
             foreach (var conventionAssembly in conventionAssemblies)
                 mapping = mapping.Conventions.AddAssembly(conventionAssembly);
             foreach (var overridesAssembly in overridesAssemblies)
