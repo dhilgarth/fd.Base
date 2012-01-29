@@ -11,20 +11,20 @@ namespace fd.Base.NHibernate
     /// <summary>The default session factory builder.</summary>
     public class DefaultSessionFactoryBuilder : ISessionFactoryBuilder
     {
-        private readonly IAutomappingConfiguration _autoMappingConfiguration;
+        private readonly IAutoMappingAdjuster _autoMappingAdjuster;
         private readonly IPersistenceConfigurerProvider _persistenceConfigurerProvider;
         private readonly IRawNHibernateConfigChanger _rawNHibernateConfigChanger;
 
         /// <summary>Initializes a new instance of the <see cref="DefaultSessionFactoryBuilder" /> class.</summary>
-        /// <param name="autoMappingConfiguration">The auto-mapping configuration to use.</param>
+        /// <param name="autoMappingAdjuster">The auto-mapping configuration to use.</param>
         /// <param name="persistenceConfigurerProvider">The persistence configurer provider.</param>
         /// <param name="rawNHibernateConfigChanger">The raw N hibernate config changer.</param>
         public DefaultSessionFactoryBuilder(
-            IAutomappingConfiguration autoMappingConfiguration, 
+            IAutoMappingAdjuster autoMappingAdjuster, 
             IPersistenceConfigurerProvider persistenceConfigurerProvider, 
             IRawNHibernateConfigChanger rawNHibernateConfigChanger)
         {
-            _autoMappingConfiguration = autoMappingConfiguration;
+            _autoMappingAdjuster = autoMappingAdjuster;
             _persistenceConfigurerProvider = persistenceConfigurerProvider;
             _rawNHibernateConfigChanger = rawNHibernateConfigChanger;
         }
@@ -80,15 +80,6 @@ namespace fd.Base.NHibernate
                 }).ExposeConfiguration(_rawNHibernateConfigChanger.ChangeRawConfig).BuildSessionFactory();
         }
 
-        /// <summary>Adjusts the auto mappings.</summary>
-        /// <remarks>
-        /// Override in a derived class to be able to define additional parts of the auto-mapping configuration like base classes to include etc.
-        /// </remarks>
-        /// <param name="mapping">The mapping.</param>
-        protected virtual void AdjustAutoMappings(AutoPersistenceModel mapping)
-        {
-        }
-
         /// <summary>Creates the auto mappings.</summary>
         /// <param name="entityAssemblies">The assemblies containing the entities to map.</param>
         /// <param name="conventionAssemblies">The assemblies containing additional conventions to use.</param>
@@ -97,11 +88,13 @@ namespace fd.Base.NHibernate
         protected virtual AutoPersistenceModel CreateAutoMappings(
             IEnumerable<Assembly> entityAssemblies, IEnumerable<Assembly> conventionAssemblies, IEnumerable<Assembly> overridesAssemblies)
         {
-            var mapping = AutoMap.Assemblies(_autoMappingConfiguration, entityAssemblies).Conventions.AddDefault();
+            var mapping = AutoMap.Assemblies(_autoMappingAdjuster, entityAssemblies).Conventions.AddDefault();
             foreach (var conventionAssembly in conventionAssemblies)
                 mapping = mapping.Conventions.AddAssembly(conventionAssembly);
             foreach (var overridesAssembly in overridesAssemblies)
                 mapping = mapping.UseOverridesFromAssembly(overridesAssembly);
+
+            _autoMappingAdjuster.AdjustAutoMappings(mapping);
 
             return mapping;
         }
