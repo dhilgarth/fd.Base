@@ -59,9 +59,6 @@ namespace fd.Base.Extensions.Simple
                     var type = linqPadAssembly.GetType(@"LINQPad.ObjectGraph.Formatters.XhtmlWriter");
                     _xhtmlWriterConstructor = type.GetConstructor(new[] { typeof(bool), typeof(bool) });
                     _writeDepthMethod = type.GetMethod("WriteDepth", new[] { typeof(object), typeof(int?) });
-
-                    // ..GetMethod(
-                    // @"CreateXhtmlWriter", BindingFlags.Static | BindingFlags.Public, null, new[] { typeof(bool) }, new ParameterModifier[] { });
                 }
 
                 using (dynamic writer = _xhtmlWriterConstructor.Invoke(new object[] { true, true }))
@@ -76,6 +73,21 @@ namespace fd.Base.Extensions.Simple
             }
 
             Process.Start(localUrl);
+        }
+
+        /// <summary>
+        /// Prints the elapsed time of the stopwatch.
+        /// </summary>
+        /// <param name="stopwatch">The stopwatch.</param>
+        /// <param name="text">The text to prefix the time with.</param>
+        /// <remarks>
+        /// Stops the stopwatch before printing and restarts it afterwards.
+        /// </remarks>
+        public static void PrintElapsed(this Stopwatch stopwatch, string text)
+        {
+            stopwatch.Stop();
+            Debug.WriteLine("{0}: {1}", (object)text, (object)stopwatch.Elapsed);
+            stopwatch.Restart();
         }
     }
 }
