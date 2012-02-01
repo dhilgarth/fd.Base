@@ -519,19 +519,6 @@ instance</s:String>
 	<s:Boolean x:Key="/Default/Environment/GenerateMru/SortByName/=Implementations/@EntryIndexedValue">False</s:Boolean>
 	<s:Boolean x:Key="/Default/Environment/GenerateMru/SortByName/=Overrides/@EntryIndexedValue">False</s:Boolean>
 	<s:String x:Key="/Default/Environment/Hierarchy/PsiConfiguration/LocationType/@EntryValue">TEMP_FOLDER</s:String>
-	<s:Boolean x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=2C66790A4CCF5743ACC3023E86FF4A73/@KeyIndexDefined">True</s:Boolean>
-	<s:String x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=2C66790A4CCF5743ACC3023E86FF4A73/AbsolutePath/@EntryValue">C:\Data\Projects\Library\doc\UnitTestProjectsResharperSettings.DotSettings</s:String>
-	<s:String x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=2C66790A4CCF5743ACC3023E86FF4A73/RelativePath/@EntryValue">..\..\..\..\..\..\..\..\Data\Projects\Library\doc\UnitTestProjectsResharperSettings.DotSettings</s:String>
-	<s:Boolean x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=6C79AD21328E9C4EB76FD38854541789/@KeyIndexDefined">True</s:Boolean>
-	<s:String x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=6C79AD21328E9C4EB76FD38854541789/AbsolutePath/@EntryValue">C:\Data\Projects\Library\doc\ResharperSettings.DotSettings</s:String>
-	<s:String x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=6C79AD21328E9C4EB76FD38854541789/RelativePath/@EntryValue">..\..\..\..\..\..\..\..\Data\Projects\Library\doc\ResharperSettings.DotSettings</s:String>
-	<s:Boolean x:Key="/Default/Environment/InjectedLayers/InjectedLayerCustomization/=File_003A_003AC_003A_005CData_005CProjects_005CLibrary_005Cdoc_005CResharperSettings_002EDotSettings/@KeyIndexDefined">True</s:Boolean>
-	<s:String x:Key="/Default/Environment/InjectedLayers/InjectedLayerCustomization/=File_003A_003AC_003A_005CData_005CProjects_005CLibrary_005Cdoc_005CResharperSettings_002EDotSettings/DisplayName/@EntryValue">Default ReSharper settings</s:String>
-	<s:Double x:Key="/Default/Environment/InjectedLayers/InjectedLayerCustomization/=File_003A_003AC_003A_005CData_005CProjects_005CLibrary_005Cdoc_005CResharperSettings_002EDotSettings/RelativePriority/@EntryValue">2</s:Double>
-	<s:Boolean x:Key="/Default/Environment/InjectedLayers/InjectedLayerCustomization/=File_003A_003AC_003A_005CData_005CProjects_005CLibrary_005Cdoc_005CUnitTestProjectsResharperSettings_002EDotSettings/@KeyIndexDefined">True</s:Boolean>
-	<s:String x:Key="/Default/Environment/InjectedLayers/InjectedLayerCustomization/=File_003A_003AC_003A_005CData_005CProjects_005CLibrary_005Cdoc_005CUnitTestProjectsResharperSettings_002EDotSettings/DisplayName/@EntryValue">Default settings for unit test projects</s:String>
-	<s:Boolean x:Key="/Default/Environment/InjectedLayers/InjectedLayerCustomization/=File_003A_003AC_003A_005CData_005CProjects_005CLibrary_005Cdoc_005CUnitTestProjectsResharperSettings_002EDotSettings/IsOn/@EntryValue">False</s:Boolean>
-	<s:Double x:Key="/Default/Environment/InjectedLayers/InjectedLayerCustomization/=File_003A_003AC_003A_005CData_005CProjects_005CLibrary_005Cdoc_005CUnitTestProjectsResharperSettings_002EDotSettings/RelativePriority/@EntryValue">1</s:Double>
 	<s:Boolean x:Key="/Default/Environment/MemoryUsageIndicator/IsVisible/@EntryValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/Environment/SearchAndNavigation/AutoExpandResults/@EntryValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/Environment/SearchAndNavigation/MergeOccurences/@EntryValue">True</s:Boolean>
@@ -1975,6 +1962,27 @@ public $type$ $propertyName$&#xD;
 		}&#xD;
 	}&#xD;
 }</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=98B036164FC37746B7FDA1A8ABAE0387/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=98B036164FC37746B7FDA1A8ABAE0387/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=98B036164FC37746B7FDA1A8ABAE0387/Field/=fieldName/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=98B036164FC37746B7FDA1A8ABAE0387/Field/=fieldName/Expression/@EntryValue">decapitalize(name)</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=98B036164FC37746B7FDA1A8ABAE0387/Field/=fieldName/InitialRange/@EntryValue">-1</s:Int64>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=98B036164FC37746B7FDA1A8ABAE0387/Field/=fieldName/Order/@EntryValue">2</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=98B036164FC37746B7FDA1A8ABAE0387/Field/=name/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=98B036164FC37746B7FDA1A8ABAE0387/Field/=name/Expression/@EntryValue">suggestVariableName()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=98B036164FC37746B7FDA1A8ABAE0387/Field/=name/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=98B036164FC37746B7FDA1A8ABAE0387/Field/=type/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=98B036164FC37746B7FDA1A8ABAE0387/Field/=type/Expression/@EntryValue">suggestVariableType()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=98B036164FC37746B7FDA1A8ABAE0387/Field/=type/InitialRange/@EntryValue">1</s:Int64>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=98B036164FC37746B7FDA1A8ABAE0387/Field/=type/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=98B036164FC37746B7FDA1A8ABAE0387/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=98B036164FC37746B7FDA1A8ABAE0387/Scope/=B68999B9D6B43E47A02B22C12A54C3CC/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=98B036164FC37746B7FDA1A8ABAE0387/Scope/=B68999B9D6B43E47A02B22C12A54C3CC/CustomProperties/=minimumLanguageVersion/@EntryIndexedValue">2.0</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=98B036164FC37746B7FDA1A8ABAE0387/Scope/=B68999B9D6B43E47A02B22C12A54C3CC/Type/@EntryValue">InCSharpTypeMember</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=98B036164FC37746B7FDA1A8ABAE0387/Shortcut/@EntryValue">rprop</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=98B036164FC37746B7FDA1A8ABAE0387/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=98B036164FC37746B7FDA1A8ABAE0387/Text/@EntryValue">private $type$ _$fieldName$;&#xD;
+public $type$ $name$ { get{return _$fieldName$;} }</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=98E952906672B24D872F608D53D07D9E/@KeyIndexDefined">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=98E952906672B24D872F608D53D07D9E/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=98E952906672B24D872F608D53D07D9E/Categories/=WF4/@EntryIndexedValue">WF4</s:String>
